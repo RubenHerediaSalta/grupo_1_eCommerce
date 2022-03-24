@@ -1,4 +1,7 @@
 Portal dedicado a la venta de artículos e insumos de computación con gran variedad, principalmente dedicada al público gamer y entusiasta. Ofrecemos atención personalizada tratando de cumplir siempre con las expectativas del cliente. El mejor precio del mercado y la mejor financiación.
+¿Quienes somos? 
+Soy Emmanuel y trabajo de despachante de aduana, primera experiencia con programacion.
+
 
 Sitios consultados:
 https://compragamer.com/
