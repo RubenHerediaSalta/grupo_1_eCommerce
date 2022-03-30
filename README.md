@@ -4,6 +4,7 @@ Portal dedicado a la venta de artículos e insumos de computación con gran vari
 Soy Emmanuel y trabajo de despachante de aduana, primera experiencia con programacion.
 Soy Rubén y trabajo en una Fabrica de colchones y muebles, no tengo experiencia en programacion.
 Soy Santino y trabajo en McDonald's, estoy dando mis primeros pasos en el mundo del desarrollo.
+Soy Juan, contador público, trabajo en un Banco, no tengo experiencia en programación.
 
 Sitios consultados:
 https://compragamer.com/
