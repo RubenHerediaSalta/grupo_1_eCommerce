@@ -1,0 +1,4 @@
+La principal falla que notamos en el grupo es que por distintas causas nunca podemos estar todos los integrantes presentes en las reuniones, lo cual dificulta un intercambio de ideas rapido.
+Por otro lado notamos que en las reuniones se ditorsiona el foco del tema principal, estirando el tiempo de la reunion y dejando temas por tratar.
+En cuanto a lo positivo se aprovechan las reuniones para ayudar al compañero que no esta al dia o que tuvo problemas con determinados temas, para que de este modo se pueda centrar mas en el proyecto integrador.
+La dinamica del grupo es fluida, colaborativa, con buena comunicacion y compromiso.
