@@ -1,0 +1,22 @@
+{
+  "name": "grupo_1_ecommerce",
+  "version": "1.0.0",
+  "description": "Portal dedicado a la venta de artículos e insumos de computación con gran variedad, principalmente dedicada al público gamer y entusiasta. Ofrecemos atención personalizada tratando de cumplir siempre con las expectativas del cliente. El mejor precio del mercado y la mejor financiación.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RubenHerediaSalta/grupo_1_eCommerce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RubenHerediaSalta/grupo_1_eCommerce/issues"
+  },
+  "homepage": "https://github.com/RubenHerediaSalta/grupo_1_eCommerce#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
