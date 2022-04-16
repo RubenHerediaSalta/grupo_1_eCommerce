@@ -10,3 +10,7 @@ app.listen(2022 ,()=>{
 app.get('/register', (req,res)=>{
     res.sendFile(__dirname + '/views/register.html');
 });
+
+app.get('/articulo', (req,res)=>{
+    res.sendFile(__dirname + '/views/producto.html');
+});
