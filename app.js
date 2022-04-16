@@ -8,20 +8,21 @@ app.listen(2022 ,()=>{
     console.log('Custom on')
 });
 
-app.get("/", (req,res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/home.html"))
-})
-
-app.get("/register", (req,res)=>{
-    res.sendFile(__dirname + "/views/register.html");
+app.get('/', (req,res)=>{
+    res.sendFile(__dirname + '/views/home.html');
 });
 
-app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + '/views/login.html');
+
+app.get('/register', (req,res)=>{
+    res.sendFile(__dirname + '/views/register.html');
 });
 
 app.get('/producto', (req,res)=>{
     res.sendFile(__dirname + '/views/producto.html');
+});
+
+app.get('/login', (req,res)=>{
+    res.sendFile(__dirname + '/views/login.html');
 });
 
 app.get('/carrito', (req,res)=>{
