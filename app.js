@@ -17,8 +17,8 @@ app.get('/register', (req,res)=>{
     res.sendFile(__dirname + '/views/register.html');
 });
 
-app.get('/producto', (req,res)=>{
-    res.sendFile(__dirname + '/views/producto.html');
+app.get('/productDetailNotebook', (req,res)=>{
+    res.sendFile(__dirname + '/views/productDetailNotebook.html');
 });
 
 app.get('/login', (req,res)=>{

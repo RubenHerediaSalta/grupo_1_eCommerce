@@ -8,13 +8,13 @@ header{
     background-color: yellow;
     font-family: 'Audiowide', sans-serif;
     box-sizing: border-box;
-    width: auto;
 }
 main{
     font-family: 'Arial', sans-serif;
     width: 100%;
     margin: 0 auto;
     display: block;
+    background-color: black;
 }
 
 footer{
@@ -26,7 +26,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .logo{
@@ -101,23 +101,28 @@ section .carrou{
     display: flex;
     width: 100%;
     flex-direction: column;
-   margin-top: 5px;
 }
 
 article{
     position: relative;
-    box-shadow: 0 0 10px rgb(100, 100, 100);
-    width: 18%;
+    box-shadow: 0 0 10px rgb(251, 255, 0);
+    width: 45%;
+    margin: 5px;
+}
+
+.forma{
+    width: 100%;
 }
 
 article img{
     width: 200px;
     height: 200px;
+    width: 100%;
 }
 
 .productos{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     box-sizing: border-box;
     padding: 10px;
@@ -142,6 +147,7 @@ article img{
     text-align: center;
     font-weight: bold;
     margin-top: 5px;
+    color: white;
 }
 .pop {
     opacity: 0;
@@ -172,7 +178,6 @@ main article:hover .pop{
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    margin-top: 5px;
 }
 
 a{
@@ -181,4 +186,84 @@ a{
 }
 a:hover{
     color: yellow;
+}
+
+/*--------- DETALLES DE PRODUCTOS-------- */
+
+.notebookdetail{
+    display: flex;
+    flex-wrap: wrap;
+}
+.pdinfo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.pddes{
+    font-family: 'Audiowide', sans-serif;
+    width: 100%;
+    color: white;
+    height: 30px;
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.pdesp{
+    width: 100%;
+    color: white;
+    text-align: justify;
+    padding-right: 10px;
+}
+.pdpre{
+    width: 100%;
+    color: red;
+    font-family: 'Audiowide', sans-serif;
+}
+.pdfde{
+    width: 33%;
+    color: white;
+    text-align: center;
+}
+.pdc{
+    width: 33%;
+    color: white;
+    text-align: center;
+}
+.pde{
+    width: 33%;
+    color: white;
+    text-align: center;
+}
+.pdimg{
+    display: flex;
+    width: 40%;
+    height: 300px;
+    transition: all 600ms;
+    justify-content: space-around;
+}
+
+.pdimg:hover {
+    transform: scale(1.5);
+    
+}
+
+/*------------------------------------*/
+
+@media (min-width: 768px) {
+    .descripcion {
+        display: none;
+    }
+    article{
+        position: relative;
+        box-shadow: 0 0 10px rgb(251, 255, 0);
+        width: 18%;
+    }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-around;
+    } 
 }
