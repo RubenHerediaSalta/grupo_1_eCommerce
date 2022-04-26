@@ -10,7 +10,6 @@
     rel="stylesheet" >
         <link rel="stylesheet" href="./css/styles.css">
     </head>
-
 <body>
 
     <header>
@@ -43,54 +42,56 @@
                     <i class="fas fa-bars"></i>
                 </div>
     </header>
-
+    
     <main>
-    <div class="notebookdetail">
-        <div class="pdimg"><img src="images/notebook.png" alt=""></div>
-        <div class="pdinfo">
-        <div class="pddes"><p>Notebook ASUS TUF</p></div>
-        <div class="pdesp"><p>Pantallas de alta frecuencia y GPUs competitivas, las notebooks TUF Gaming son duraderas, resistentes y ofrecen una experiencia de juego increíble. <br>
-            Memoria RAM: 8 GB - Tipo de memoria RAM: DDR4 - Memoria de video: 4 GB <br>
-            Frecuencia de actualización de la pantalla: 144 Hz - Resolución de la pantalla: 1920 px x 1080 px - Con pantalla táctil: No - Tamaño de la pantalla: 15.6 "
-        </p></div>
-        <div class="pdpre"><p>$12.345</p></div>
-        <div class="pdfde">
-            <label for="formadepago">Forma de pago</label>
-            <select name="formadepago" id="formadepago">
-                <option value="efectivo">Efectivo(en local)</option>
-                <option value="credito">Tarjeta de Credito</option>
-                <option value="debito">Debito</option>
-                <option value="transferencia">Transferencia</option>
-            </select>
-        </div>
-        <div class="pdc">
-            <label for="cantidad">Cantidad</label>
-            <select name="cantidad" id="cantidad">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="masde5">Consultar</option>
-            </select>
-        </div>
-        <div class="pde">
-            <label for="envio">Metodo de Envio</label>
-            <select name="envio" id="envio">
-                <option value="retiro">Retiro por Local</option>
-                <option value="domicilio">Envio a Domicilio</option>
-            </select>
-        </div>
-        <div class="botoncomprar">
-            <button type="submit" class="boton">Comprar Ahora</button>
-        </div>
-        <div class="botoncarrito">
-            <button type="submit" class="boton">Agregar al Carrito</button>
-        </div>
-        
 
-
-    </div>
+    <div class="productoscarrito">
+        <div class="listacarrito">
+            <div class="pc1">
+            <div class="pcimg"><img src="images/notebook.png" alt=""></div>
+            <div class="pcdes"><p>Notebook ASUS TUF</p></div>
+            <div class="pccan">
+                <label for="cantidad">Cantidad</label>
+                <select name="cantidad" id="cantidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="n">n</option>
+                </select>
+            </div>
+            <div class="pcpre"><p>$12.345</p></div>
+            <div class="pcdel"><i class="fa-solid fa-trash-can"></i></div>
+            </div>
+            <div class="pc1">
+                <div class="pcimg"><img src="images/notebook.png" alt=""></div>
+                <div class="pcdes"><p>Notebook ASUS TUF</p></div>
+                <div class="pccan">
+                    <label for="cantidad">Cantidad</label>
+                    <select name="cantidad" id="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="n">n</option>
+                    </select>
+                </div>
+                <div class="pcpre"><p>$12.345</p></div>
+                <div class="pcdel"><i class="fa-solid fa-trash-can"></i></div>
+                </div>
+        </div>
+        <div class="resumenpedido">
+            <div class="pctit"><p>RESUMEN DE PEDIDO</p></div>
+            <div class="pctotal"><p>TOTAL: $24.690</p></div>
+            <div class="pcbotones">
+            <div class="botonvaciar">
+                <button type="submit" class="boton">VACIAR CARRITO</button>
+            </div>
+            <div class="botoncontinuar">
+                <button type="submit" class="boton">CONFIRMAR COMPRA</button>
+            </div>
+        </div>
+        </div>
     </div>
 
     </main>
