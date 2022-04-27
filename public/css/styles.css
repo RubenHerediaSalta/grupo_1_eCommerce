@@ -5,7 +5,7 @@
     }
 /* -----------SECCIONES PRINCIPALES DE CUERPO--------------*/
 header{
-    background-color: yellow;
+    background-color: orange;
     font-family: 'Audiowide', sans-serif;
     box-sizing: border-box;
 }
@@ -102,7 +102,7 @@ section .ofertas{
 
 article{
     position: relative;
-    box-shadow: 0 0 10px rgb(251, 255, 0);
+    box-shadow: 0 0 10px orange;
     width: 45%;
     margin: 5px;
 }
@@ -183,7 +183,7 @@ a{
     transition: all 450ms;
 }
 a:hover{
-    color: yellow;
+    color: orange;
 }
 
 /*------------- DETALLES DE PRODUCTOS------------ */
@@ -195,6 +195,7 @@ a:hover{
 .pdinfo{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     width: 60%;
     justify-content: space-evenly;
     padding: 10px;
@@ -203,7 +204,6 @@ a:hover{
     font-family: 'Audiowide', sans-serif;
     width: 100%;
     color: white;
-    height: 30px;
     padding-top: 15px;
     font-size: 20px;
     font-weight: bolder;
@@ -333,7 +333,15 @@ a:hover{
     border-radius: 15%;
 }
 /*-------------------------------------------------*/
+.pdicon{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px;
+    color: chartreuse;
 
+}
 
 @media (min-width: 768px) {
     .descripcion {
@@ -341,7 +349,7 @@ a:hover{
     }
     article{
         position: relative;
-        box-shadow: 0 0 10px rgb(251, 255, 0);
+        box-shadow: 0 0 10px orange;
         width: 18%;
     }
     .productos{
