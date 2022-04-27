@@ -5,7 +5,7 @@
     }
 /* -----------SECCIONES PRINCIPALES DE CUERPO--------------*/
 header{
-    background-color: orange;
+    background-image: url("/images/backhead.jpg");
     font-family: 'Audiowide', sans-serif;
     box-sizing: border-box;
 }
@@ -40,25 +40,29 @@ footer{
     font-size: 40px;
 }
 
-.form{
-    display: flex;
-    width: 40%;
-    box-sizing: border-box;
+/* ------------SEARCH BAR------------ */
+.search input[type=text]{
+    width:300px;
+    height:25px;
+    border-radius:25px;
+    border: none;
 }
-
-header .form .input{
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
+      
+.search{
+    float:right;
+    margin:7px;
 }
-header .form .submit{
-    background-color: #FFF;
-    border: 1px solid #000;
-    color: #666;
-    width: 10%;
-}
+      
+.search button{
+    border-radius: 50%;
+    float: right;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+} 
+/*-------------------------------------------*/
 
 .categorias{
     display: flex;
