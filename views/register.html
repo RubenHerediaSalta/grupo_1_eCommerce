@@ -43,92 +43,26 @@
             </div>
     
     </header>
-    <main>
 
-
-       <section>
+    <main class="register-main">
 
         <form action="/register" method="POST">
 
-            
-
-
-            <label for="email">e-mail</label> 
-            <input type="text" name="email">
-            
-            <br>
-
-            <label for="nombre">Nombre</label>
-
-            <input type="text" name="usuario">
-
-            <br>
-
-            <label for="apellido">Apellido</label>
-            <input type="text" name="apellido">
-
-            <br>
-
-            <label for="telefono">Telefono</label>
-            <input type="text" name="Telefono">
-
-            <br>
-
-
-            <label for="provincia">Selecciona tu provincia</label>
-            <select name="provincia">
-
-                <option value="buenos-aires">Buenos Aires</option>
-                <option value="ciudad-bs-as">Ciudad Autónoma de Buenos Aires</option>
-                <option value="catamarca">Catamarca</option>
-                <option value="chaco">Chaco</option>
-                <option value="chubut">Chubut</option>
-                <option value="cordoba">Córdoba</option>
-                <option value="corrientes">Corrientes</option>
-                <option value="entre-rios">Entre Ríos</option>
-                <option value="formosa">Formosa</option>
-                <option value="jujuy">Jujuy</option>
-                <option value="la-pampa">La Pampa</option>
-                <option value="la-rioja">La Rioja</option>
-                <option value="mendoza">Mendoza</option>
-                <option value="misiones">Misiones</option>
-                <option value="neuquen">Neuquén</option>
-                <option value="rio-negro">Río Negro</option>
-                <option value="salta">Salta</option>
-                <option value="san-juan">San Juan</option>
-                <option value="san-luis">San Luis</option>
-                <option value="santa-cruz">Santa Cruz</option>
-                <option value="santa-fe">Santa Fe</option>
-                <option value="santiago-del-estero">Santiago del Estero</option>
-                <option value="tierra-fuego">Tierra del Fuego, Antártida e Islas del Atlántico Sur</option>
-                <option value="tucuman">Tucumán</option>
-               
+        <section class="register-custom">
+            <h4>Registrate ahora!</h4>
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+            <input class="controls" type="email" name="correos" id="correo" placeholder="Ingrese su Correo">
+            <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
+            <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Confirme su contraseña">
+            <p>Estoy de acuerdo con <a href="#">Terminos y condiciones </a><input type="checkbox" id="huey" name="drone" value="Acepto"></p>
+            <input class="boton" type="submit" value="Registrar">
+            <p><a href="#">¿Ya tenes cuenta?</a></p>
+        </section>
 
 
 
-            </select>            
-
-            <br>
-
-
-            <label for="password">Contraseña</label>
-
-            <input type="password" name="clave">
-
-            <br>
-
-
-            <label for="password">Confirmar Contraseña</label>
-
-            <input type="password" name="clave">
-
-
-
-        </form>
-
-
-
-       </section>
+      
 
 
 

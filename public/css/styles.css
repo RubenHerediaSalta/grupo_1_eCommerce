@@ -343,6 +343,82 @@ a:hover{
 
 }
 
+
+/* ------------------FORMULARIO DE REGISTRO-------------------- */ 
+
+
+.register-custom {
+    width: 400px;
+    background: orange;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family:'Arial', sans-serif;
+    color: white;
+    box-shadow: 6px 14px 37px #000;
+    
+ 
+
+
+
+}
+
+.register-custom h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+
+}
+
+.controls {
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    border: 1px solid orange;
+    font-family:'Arial', sans-serif;
+    font-size: 18px;
+
+}
+
+.register-custom p {
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 40px;
+
+}
+
+.register-custom a {
+    color: white; 
+    text-decoration: none;
+
+}
+
+.register-custom a:hover {
+    color: white; 
+    text-decoration: none;
+    
+}
+
+.register-custom .boton {
+    width: 100%;
+    background: gray;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+
+.register-main {
+    padding-top: 20px;
+    background-color: #2A2B12
+}
+
+
 @media (min-width: 768px) {
     .descripcion {
         display: none;
@@ -364,3 +440,7 @@ a:hover{
         flex-direction: row;
     }
 }
+
+
+
+
