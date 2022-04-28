@@ -353,12 +353,12 @@ a:hover{
 
 .register-custom {
     width: 400px;
-    background: orange;
+    background-image: url("/images/backhead.jpg");
     padding: 30px;
     margin: auto;
     margin-top: 100px;
     border-radius: 4px;
-    font-family:'Arial', sans-serif;
+    font-family:'Audiowide', sans-serif;
     color: white;
     box-shadow: 6px 14px 37px #000;
     
@@ -368,9 +368,27 @@ a:hover{
 
 }
 
+
+.term-c {
+    font-size: 10px;
+    font-family: sans-serif;
+    transition: all 450ms;
+    color: #000;
+}
+
+.term-c:hover { 
+    background-color: black;
+    border-radius: 10px;
+    color:wheat 
+
+
+}
+
+
 .register-custom h4 {
     font-size: 22px;
     margin-bottom: 20px;
+    color: #000;
 
 }
 
@@ -381,7 +399,7 @@ a:hover{
     border-radius: 5px;
     margin-bottom: 16px;
     border: 1px solid orange;
-    font-family:'Arial', sans-serif;
+    font-family:'Audiowide', sans-serif;
     font-size: 18px;
 
 }
@@ -392,13 +410,9 @@ a:hover{
     font-size: 15px;
     line-height: 40px;
 
-}
-
-.register-custom a {
-    color: white; 
-    text-decoration: none;
 
 }
+
 
 .register-custom a:hover {
     color: white; 
@@ -414,12 +428,70 @@ a:hover{
     color: white;
     margin: 16px 0;
     font-size: 16px;
+    transition: all 500ms;
+    border-radius: 10px;
+}
+
+.register-custom .boton:hover {
+    background-color: black
+
 }
 
 
+
 .register-main {
-    padding-top: 20px;
-    background-color: #2A2B12
+    padding-top: 15px;
+    background-color: #2A2B12;
+    padding-bottom: 30px;
+}
+
+.ya-acc {
+    font-size: 10px;
+    font-family: sans-serif;
+    transition: all 450ms;
+    color: #000;
+}
+
+.ya-acc:hover { 
+    background-color: black;
+    border-radius: 10px;
+    color:wheat 
+
+}
+
+
+
+
+/* ------------------FORMULARIO DE LOGIN ------------------- */ 
+
+
+
+.recordar-pw {
+    font-size: 10px;
+    transition: all 450ms;
+    color: #000;
+}
+
+.recordar-pw:hover { 
+    background-color: black;
+    border-radius: 10px;
+    color:wheat 
+
+
+}
+
+.no-tenes-acc {
+    font-size: 10px;
+    font-family: sans-serif;
+    transition: all 450ms;
+    color: #000;
+}
+
+.no-tenes-acc:hover { 
+    background-color: black;
+    border-radius: 10px;
+    color:wheat 
+
 }
 
 
