@@ -252,6 +252,7 @@ a:hover{
     background-color: green;
     font-weight: bolder;
     border-radius: 10px;
+    margin-right: 10px;
 }
 .botoncarrito button{
     padding: 10px;
@@ -283,6 +284,8 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 .listacarrito{
     display: flex;
@@ -335,16 +338,16 @@ a:hover{
     color: white;
     background-color: red;
     font-weight: bolder;
-    border-radius: 15%;
+    border-radius: 10px;
 }
 .botoncontinuar button{
     padding: 10px;
     color: white;
     background-color: green;
     font-weight: bolder;
-    border-radius: 15%;
+    border-radius: 10px;
 }
-/*-------------------------------------------------*/
+
 .pdicon{
     display: flex;
     justify-content: space-evenly;
@@ -354,6 +357,8 @@ a:hover{
     color: chartreuse;
 
 }
+/*-------------------------------------------------*/
+
 
 
 /* ------------------FORMULARIO DE REGISTRO-------------------- */ 
@@ -370,10 +375,6 @@ a:hover{
     color: white;
     box-shadow: 6px 14px 37px #000;
     
- 
-
-
-
 }
 
 
@@ -445,8 +446,6 @@ a:hover{
 
 }
 
-
-
 .register-main {
     padding-top: 15px;
     background-color: #2A2B12;
@@ -468,10 +467,7 @@ a:hover{
 }
 
 
-
-
 /* ------------------FORMULARIO DE LOGIN ------------------- */ 
-
 
 
 .recordar-pw {
