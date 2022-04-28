@@ -35,6 +35,8 @@ footer{
 
 .logo{
     width:40%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .carrito{
@@ -198,28 +200,32 @@ a:hover{
 .notebookdetail{
     display: flex;
     flex-wrap: wrap;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 130px;
+    padding-bottom: 130px;
 }
 .pdinfo{
+    background-image: url("/images/backhead.jpg");
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 60%;
+    width: 58%;
     justify-content: space-evenly;
     padding: 10px;
+    box-shadow: 6px 14px 37px #000;
+    margin-right: 10px;
 }
 .pddes{
     font-family: 'Audiowide', sans-serif;
     width: 100%;
-    color: white;
+    color: black;
     padding-top: 15px;
     font-size: 20px;
     font-weight: bolder;
 }
 .pdesp{
     width: 100%;
-    color: white;
+    color: black;
+    font-weight: bolder;
     text-align: justify;
     padding-right: 10px;
 }
@@ -227,6 +233,9 @@ a:hover{
     width: 100%;
     color: red;
     font-family: 'Audiowide', sans-serif;
+}
+.pdopciones{
+    display: flex;
 }
 .pdfde{
     width: 33%;
@@ -245,20 +254,28 @@ a:hover{
 }
 .pdbotones{
     display: flex;
+    justify-content: space-evenly;
 }
 .botoncomprar button{
-    padding: 10px;
+    width: 100%;
+    background: gray;
+    border: none;
+    padding: 8px;
     color: white;
-    background-color: green;
-    font-weight: bolder;
+    margin: 16px 0;
+    font-size: 16px;
+    transition: all 500ms;
     border-radius: 10px;
-    margin-right: 10px;
 }
 .botoncarrito button{
-    padding: 10px;
+    width: 100%;
+    background: gray;
+    border: none;
+    padding: 8px;
     color: white;
-    background-color: blue;
-    font-weight: bolder;
+    margin: 16px 0;
+    font-size: 16px;
+    transition: all 500ms;
     border-radius: 10px;
 }
 .pdimg{
@@ -268,10 +285,15 @@ a:hover{
     transition: all 600ms;
     justify-content: space-around;
 }
-
 .pdimg:hover {
     transform: scale(1.5);
     
+}
+.botoncarrito button:hover{
+    background-color: blue;
+}
+.botoncomprar button:hover{
+    background-color: green;
 }
 
 /*-------------------------------------------------*/
@@ -280,7 +302,8 @@ a:hover{
 
 .productoscarrito{
     padding-top: 15px;
-    color: white;
+    color: black;
+    font-weight: bolder;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -290,6 +313,7 @@ a:hover{
 .listacarrito{
     display: flex;
     flex-direction: column;
+    background-image: url("/images/backhead.jpg");
     align-items: center;
     justify-content: space-evenly;
     width: 60%;
@@ -304,6 +328,7 @@ a:hover{
     border-bottom: white solid 2px;
 }
 .resumenpedido{
+    background-image: url("/images/backhead.jpg");
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -334,27 +359,41 @@ a:hover{
     justify-content: space-between;
 }
 .botonvaciar button{
-    padding: 10px;
+    width: 100%;
+    background: gray;
+    border: none;
+    padding: 8px;
     color: white;
-    background-color: red;
-    font-weight: bolder;
+    margin: 16px 0;
+    font-size: 16px;
+    transition: all 500ms;
     border-radius: 10px;
 }
 .botoncontinuar button{
-    padding: 10px;
+    width: 100%;
+    background: gray;
+    border: none;
+    padding: 8px;
     color: white;
-    background-color: green;
-    font-weight: bolder;
+    margin: 16px 0;
+    font-size: 16px;
+    transition: all 500ms;
     border-radius: 10px;
 }
-
+.botonvaciar button:hover{
+    background-color: red;
+}
+.botoncontinuar button:hover{
+    background-color: green;
+}
 .pdicon{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     flex-direction: row;
     padding: 10px;
-    color: chartreuse;
+    font-weight: bolder;
+    color: green;
 
 }
 /*-------------------------------------------------*/
@@ -498,7 +537,7 @@ a:hover{
 
 }
 
-
+/*--------------------------------------*/
 @media (min-width: 768px) {
     .descripcion {
         display: none;
