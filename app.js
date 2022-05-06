@@ -13,22 +13,21 @@ app.get('/', (req,res)=>{
     res.render(__dirname + '/views/home');
 });
 
-
-app.get('/register', (req,res)=>{
-    res.render(__dirname + '/views/register');
-});
-
 app.get('/productDetailNotebook', (req,res)=>{
-    res.render(__dirname + '/views/productDetailNotebook');
+    res.render(__dirname + '/views/products/productDetailNotebook');
 });
 app.get('/productCart', (req,res)=>{
-    res.render(__dirname + '/views/productCart');
-});
-
-app.get('/login', (req,res)=>{
-    res.render(__dirname + '/views/login');
+    res.render(__dirname + '/views/products/productCart');
 });
 
 app.get('/carrito', (req,res)=>{
-    res.render(__dirname + '/views/carrito');
+    res.render(__dirname + '/views/products/carrito');
+});
+
+app.get('/login', (req,res)=>{
+    res.render(__dirname + '/views/users/login');
+});
+
+app.get('/register', (req,res)=>{
+    res.render(__dirname + '/views/users/register');
 });
