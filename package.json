@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/RubenHerediaSalta/grupo_1_eCommerce#readme",
   "dependencies": {
+    "ejs": "^3.1.7",
     "express": "^4.17.3"
   }
 }

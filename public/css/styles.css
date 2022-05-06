@@ -124,6 +124,8 @@ article img{
     width: 200px;
     height: 200px;
     width: 100%;
+    background-color: whitesmoke;
+    border-bottom: grey solid 2px;
 }
 
 .productos{
@@ -221,6 +223,7 @@ a:hover{
     padding-top: 15px;
     font-size: 20px;
     font-weight: bolder;
+    margin-bottom: 10px;
 }
 .pdesp{
     width: 100%;
@@ -231,6 +234,7 @@ a:hover{
 }
 .pdpre{
     width: 100%;
+    font-weight: bolder ;
     color: red;
     font-family: 'Audiowide', sans-serif;
 }

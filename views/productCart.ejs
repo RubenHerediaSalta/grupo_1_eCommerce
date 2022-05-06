@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+     <!-- Head -->
+     <%- include('./partials/head') %>
+<body>
+
+     <!-- Header -->
+     <%- include('./partials/header') %>
+    
+    <main>
+
+    <div class="productoscarrito">
+        <div class="listacarrito">
+            <div class="pc1">
+            <div class="pcimg"><img src="images/notebook.png" alt=""></div>
+            <div class="pcdes"><p>Notebook ASUS TUF</p></div>
+            <div class="pccan">
+                <label for="cantidad">Cantidad</label>
+                <select name="cantidad" id="cantidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="n">n</option>
+                </select>
+            </div>
+            <div class="pcpre"><p>$12.345</p></div>
+            <div class="pcdel"><i class="fa-solid fa-trash-can"></i></div>
+            </div>
+            <div class="pc1">
+                <div class="pcimg"><img src="images/notebook.png" alt=""></div>
+                <div class="pcdes"><p>Notebook ASUS TUF</p></div>
+                <div class="pccan">
+                    <label for="cantidad">Cantidad</label>
+                    <select name="cantidad" id="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="n">n</option>
+                    </select>
+                </div>
+                <div class="pcpre"><p>$12.345</p></div>
+                <div class="pcdel"><i class="fa-solid fa-trash-can"></i></div>
+                </div>
+        </div>
+        <div class="resumenpedido">
+            <div class="pctit"><p>RESUMEN DE PEDIDO</p></div>
+            <div class="pctotal"><p>TOTAL: $24.690</p></div>
+            <div class="pcbotones">
+            <div class="botonvaciar">
+                <button type="submit" class="boton">VACIAR CARRITO</button>
+            </div>
+            <div class="botoncontinuar">
+                <button type="submit" class="boton">CONFIRMAR COMPRA</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    </main>
+
+     <!-- Footer -->
+     <%- include('./partials/footer') %>
+     
+</body>
+</html>
