@@ -2,6 +2,9 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const publicPath = path.resolve(__dirname, "./public");
+
+const rutasLogin = require('./routes/login-register.js')
+
 app.use(express.static(publicPath));
 app.set('view engine', 'ejs')
 
@@ -14,20 +17,36 @@ app.get('/', (req,res)=>{
 });
 
 app.get('/productDetailNotebook', (req,res)=>{
-    res.render(__dirname + '/views/products/productDetailNotebook');
+    res.send(__dirname + '/views/products/productDetailNotebook');
 });
 app.get('/productCart', (req,res)=>{
-    res.render(__dirname + '/views/products/productCart');
+    res.send(__dirname + '/views/products/productCart');
 });
 
 app.get('/carrito', (req,res)=>{
-    res.render(__dirname + '/views/products/carrito');
+    res.send(__dirname + '/views/products/carrito');
 });
 
-app.get('/login', (req,res)=>{
-    res.render(__dirname + '/views/users/login');
+
+
+
+
+ /* app.get('/login', (req,res)=>{
+    res.send(__dirname + '/views/users/login');
 });
+/* 
+
+/*/ 
+
+
+
+
+
+
+app.use('/login', rutasLogin)
+
+
 
 app.get('/register', (req,res)=>{
-    res.render(__dirname + '/views/users/register');
+    res.send(__dirname + '/views/users/register');
 });
