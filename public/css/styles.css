@@ -416,8 +416,7 @@ a:hover{
     border-radius: 4px;
     font-family:'Audiowide', sans-serif;
     color: white;
-    box-shadow: 6px 14px 37px #000;
-    
+    box-shadow: 6px 14px 37px #000; 
 }
 
 
@@ -432,28 +431,24 @@ a:hover{
     background-color: black;
     border-radius: 10px;
     color:wheat 
-
-
 }
-
 
 .register-custom h4 {
     font-size: 22px;
     margin-bottom: 20px;
     color: #000;
-
 }
 
 .controls {
     width: 100%;
     background-color: black;
+    color: white;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 16px;
     border: 1px solid orange;
     font-family:'Audiowide', sans-serif;
     font-size: 18px;
-
 }
 
 .register-custom p {
@@ -461,15 +456,11 @@ a:hover{
     text-align: center;
     font-size: 15px;
     line-height: 40px;
-
-
 }
-
 
 .register-custom a:hover {
     color: white; 
     text-decoration: none;
-    
 }
 
 .register-custom .boton {
@@ -506,9 +497,9 @@ a:hover{
     background-color: black;
     border-radius: 10px;
     color:wheat 
-
 }
 
+/*-------------------------------------------------*/
 
 /* ------------------FORMULARIO DE LOGIN ------------------- */ 
 
@@ -523,8 +514,6 @@ a:hover{
     background-color: black;
     border-radius: 10px;
     color:wheat 
-
-
 }
 
 .no-tenes-acc {
@@ -538,10 +527,9 @@ a:hover{
     background-color: black;
     border-radius: 10px;
     color:wheat 
-
 }
 
-/*--------------------------------------*/
+/*-------------------------------------------------*/
 @media (min-width: 768px) {
     .descripcion {
         display: none;

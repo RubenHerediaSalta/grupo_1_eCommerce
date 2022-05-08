@@ -20,8 +20,8 @@ app.get('/productCart', (req,res)=>{
     res.render(__dirname + '/views/products/productCart');
 });
 
-app.get('/carrito', (req,res)=>{
-    res.render(__dirname + '/views/products/carrito');
+app.get('/editProducts', (req,res)=>{
+    res.render(__dirname + '/views/products/editProducts');
 });
 
 app.get('/login', (req,res)=>{
