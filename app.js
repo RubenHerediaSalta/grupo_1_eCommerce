@@ -1,52 +1,33 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const publicPath = path.resolve(__dirname, "./public");
 
-const rutasLogin = require('./routes/login-register.js')
+const rutaUser = require('./routes/users.js');
+const rutaMain = require('./routes/main.js');
+const rutaProducts = require('./routes/productsController.js');
 
-app.use(express.static(publicPath));
-app.set('view engine', 'ejs')
+
+app.use(express.static(path.join(__dirname,'public')));
+
+app.set('view engine', 'ejs');
+
 
 app.listen(2022 ,()=>{
     console.log('Custom on')
 });
 
-app.get('/', (req,res)=>{
-    res.render(__dirname + '/views/home');
-});
 
-app.get('/productDetailNotebook', (req,res)=>{
-    res.send(__dirname + '/views/products/productDetailNotebook');
-});
-app.get('/productCart', (req,res)=>{
-    res.send(__dirname + '/views/products/productCart');
-});
-
-app.get('/carrito', (req,res)=>{
-    res.send(__dirname + '/views/products/carrito');
-});
-
-
-
-
-
- /* app.get('/login', (req,res)=>{
-    res.send(__dirname + '/views/users/login');
-});
-/* 
-
-/*/ 
+app.use('/', rutaUser);
+app.use('/usuario', rutaUser);
+app.use('/', rutaMain);
+app.use('/', rutaProducts);
+app.use('/pr1', rutaProducts);
+app.use('/pr2', rutaProducts);
 
 
 
 
 
 
-app.use('/login', rutasLogin)
 
 
-
-app.get('/register', (req,res)=>{
-    res.send(__dirname + '/views/users/register');
-});
