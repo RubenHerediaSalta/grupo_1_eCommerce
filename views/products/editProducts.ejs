@@ -14,19 +14,19 @@
         <section class="register-custom">
             <h4>AGREGAR/EDITAR PRODUCTO</h4>
             <input class="controls" type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del Producto">
-            <input class="controls" type="textarea" name="descripcionProducto" id="descripcionProducto" placeholder="Descripción del Producto">
-            <label for="categoriaProducto">Categoria</label>
-            <select name="categoriaProducto" id="categoriaProducto">
+            <div class="controls"><label for="descripcionProducto">Descripción del Producto:</label>
+            <textarea style="width: 100% ; height: 80px;" name="descripcionProducto" id="descripcionProducto">Introducir la descripción...</textarea></div>
+            <div class="controls"><label for="categoriaProducto">Categoria :</label>
+            <select name="categoriaProducto" id="categoriaProducto" style="font-family: 'Audiowide';">
                 <option value="notebooks">NOTEBOOKS</option>
                 <option value="monitores">MONITORES</option>
                 <option value="placasdevideo">PLACAS DE VIDEO</option>
                 <option value="almacenamiento">ALMACENAMIENTO</option>
                 <option value="perifericos">PERIFERICOS</option>
                 <option value="ofertas">OFERTAS</option>
-            </select>
+            </select></div>
             <input class="controls" type="text" name="precioProducto" id="precioProducto" placeholder="Precio del Producto">
-            <input class="controls" type="file" name="imagenProducto" id="imagenProducto" accept=".jpg" multiple placeholder="Seleccionar Imagen" style="display: none">
-            <input class="boton" type="submit" onclick="document.getElementById('getFile').click()">
+            <input class="controls" type="file" name="imagenProducto" id="imagenProducto" accept=".jpg" multiple placeholder="Seleccionar Imagen">
             <input class="boton" type="submit" value="Agregar/Editar">
         </section>
         </form>
