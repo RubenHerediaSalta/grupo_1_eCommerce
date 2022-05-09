@@ -1,33 +1,33 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const publicPath = path.resolve(__dirname, "./public");
-app.use(express.static(publicPath));
-app.set('view engine', 'ejs')
+
+const rutaUser = require('./routes/users.js');
+const rutaMain = require('./routes/main.js');
+const rutaProducts = require('./routes/productsController.js');
+
+
+app.use(express.static(path.join(__dirname,'public')));
+
+app.set('view engine', 'ejs');
+
 
 app.listen(2022 ,()=>{
     console.log('Custom on')
 });
 
-app.get('/', (req,res)=>{
-    res.render(__dirname + '/views/home');
-});
 
-app.get('/productDetailNotebook', (req,res)=>{
-    res.render(__dirname + '/views/products/productDetailNotebook');
-});
-app.get('/productCart', (req,res)=>{
-    res.render(__dirname + '/views/products/productCart');
-});
+app.use('/', rutaUser);
+app.use('/usuario', rutaUser);
+app.use('/', rutaMain);
+app.use('/', rutaProducts);
+app.use('/pr1', rutaProducts);
+app.use('/pr2', rutaProducts);
 
-app.get('/editProducts', (req,res)=>{
-    res.render(__dirname + '/views/products/editProducts');
-});
 
-app.get('/login', (req,res)=>{
-    res.render(__dirname + '/views/users/login');
-});
 
-app.get('/register', (req,res)=>{
-    res.render(__dirname + '/views/users/register');
-});
+
+
+
+
+

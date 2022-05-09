@@ -85,7 +85,12 @@ footer{
     border-color: #FFF;
     border-style: dashed;
     flex-wrap: wrap;
+    
 }
+
+
+
+
 
 .burger-menu{
     display: none;
@@ -195,6 +200,7 @@ a{
 }
 a:hover{
     color: orange;
+   
 }
 
 /*------------- DETALLES DE PRODUCTOS------------ */
