@@ -6,11 +6,9 @@ const rutaUser = require('./routes/users.js');
 const rutaMain = require('./routes/main.js');
 const rutaProducts = require('./routes/productsController.js');
 
-
 app.use(express.static(path.join(__dirname,'public')));
 
 app.set('view engine', 'ejs');
-
 
 app.listen(2022 ,()=>{
     console.log('Custom on')
