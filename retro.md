@@ -7,4 +7,4 @@ La dinamica del grupo es fluida, colaborativa, con buena comunicacion y compromi
 
 Por empezar un compañero lamentablemente no pudo continuar con el curso lo que llevo a que tengamos que reacomodar todas las tareas que ya habiamos distribuido.
 Aun seguimos teniendo problemas con las reuniones grupales donde no podemos estar siempre todos los participantes.
-Por otro lado mejoro mucho el trabajar en las tareas asignadas para los trabajos y en reuniones cortas compartir lo que cada uno fue haciendo y ayudar en lo que se pueda al compañero que se encuentre estancado.
+Por otro lado cabe destacar que mejoro el trabajo individual en las tareas asignadas y en reuniones cortas compartir lo que cada uno fue haciendo y ayudar en lo que se pueda al compañero que se encuentre estancado.
