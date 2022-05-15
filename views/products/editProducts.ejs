@@ -9,10 +9,10 @@
     
     <main class="register-main">
 
-        <form action="/editProducts" method="POST">
+        <form action="/editProducts" method="POST" enctype="multipart/form-data">
 
         <section class="register-custom">
-            <h4>AGREGAR/EDITAR PRODUCTO</h4>
+            <h4>EDITAR PRODUCTO</h4>
             <input class="controls" type="text" name="idProducto" id="idProducto" placeholder="ID del Producto">
             <input class="controls" type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del Producto">
             <div class="controls"><label for="descripcionProducto">Descripción del Producto:</label>
@@ -28,8 +28,7 @@
             <input class="controls" type="text" name="precioProducto" id="precioProducto" placeholder="Precio del Producto">
             <input class="controls" type="text" name="descuentoProducto" id="descuentoProducto" placeholder="Descuento del Producto">
             <p class="controls"> Producto en Oferta  <input type="checkbox" id="ofertaProducto" name="ofertaProducto" value="SI"></p>
-            <input class="controls" type="file" name="imagenProducto" id="imagenProducto" accept=".jpg" multiple placeholder="Seleccionar Imagen">
-            <input class="boton" type="submit" value="Agregar">
+            <input class="controls" type="file" name="imagenProducto" id="imagenProducto" accept=".jpg,.png" multiple placeholder="Seleccionar Imagen">
             <input class="boton" type="submit" value="Editar">
         </section>
         </form>
