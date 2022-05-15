@@ -68,7 +68,41 @@ footer{
     cursor: pointer;
 } 
 /*-------------------------------------------*/
+.descripcion {
+    display: flex;
+}
 
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.prod{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 5px;
+    box-shadow: 0 0 10px orange;
+}
+.prod img{
+    background-color: white;
+    height: 70%;
+    width: 100%;
+    border-bottom: #000 2px solid;
+}
+.info{
+    font-family: 'audiowide';
+    background-color: #000;
+    height: 30%;
+
+}
+.pop{
+    display: none;
+}
 .categorias{
     display: flex;
     width: 100%;
@@ -85,12 +119,7 @@ footer{
     border-color: #FFF;
     border-style: dashed;
     flex-wrap: wrap;
-    
 }
-
-
-
-
 
 .burger-menu{
     display: none;
@@ -114,38 +143,13 @@ section .ofertas{
     text-align: center;
 }
 
-article{
-    position: relative;
-    box-shadow: 0 0 10px orange;
-    width: 45%;
-    margin: 5px;
-}
-
 .forma{
     width: 100%;
-}
-
-article img{
-    width: 200px;
-    height: 200px;
-    width: 100%;
-    background-color: whitesmoke;
-    border-bottom: grey solid 2px;
-}
-
-.productos{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    box-sizing: border-box;
-    padding: 10px;
-    justify-content: space-around;
 }
 
 .precio-disc{
     display: flex;
     justify-content: space-around;
-    font-family: 'Audiowide';
 }
 
 .precio{
@@ -161,30 +165,6 @@ article img{
     font-weight: bold;
     margin-top: 5px;
     color: white;
-}
-.pop {
-    opacity: 0;
-    display: none;
-    position: absolute;
-    font-size: 16px;
-    color: #FFF;
-    font-weight: bolder;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    bottom: 0px;
-    transition: all 450ms;
-}
-
-main article:hover .pop{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 1;
 }
 
 .footinfo{
@@ -205,7 +185,7 @@ a:hover{
 
 /*------------- DETALLES DE PRODUCTOS------------ */
 
-.notebookdetail{
+.detail{
     display: flex;
     flex-wrap: wrap;
     padding-top: 130px;
@@ -535,29 +515,66 @@ a:hover{
     color:wheat 
 }
 
+
 /*-------------------------------------------------*/
 @media (min-width: 768px) {
     .descripcion {
         display: none;
     }
-    article{
-        position: relative;
-        box-shadow: 0 0 10px orange;
-        width: 18%;
-    }
+
     .productos{
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
-        box-sizing: border-box;
-        padding: 10px;
         justify-content: space-around;
+        width: 100%;
+        padding: 10px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .prod{
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 19%;
+        margin: 5px;
+        box-shadow: 0 0 10px orange;
+        border: black solid 2px;
+    }
+    .prod img{
+        background-color: white;
+        height: 70%;
+        width: 100%;
+        border-bottom: #000 2px solid;
+    }
+    .info{
+        font-family: 'audiowide';
+        background-color: #000;
+        height: 30%;
+
+    }
+    .pop {
+        opacity: 0;
+        display: none;
+        position: absolute;
+        font-size: 16px;
+        color: #FFF;
+        font-weight: bolder;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        transition: all 450ms;
+    }
+    
+    main .prod:hover .pop{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 1;
     }
     .footinfo{
         flex-direction: row;
     }
-}
-
-
-
-

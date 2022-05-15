@@ -7,6 +7,7 @@ const rutaMain = require('./routes/main.js');
 const rutaProducts = require('./routes/productsController.js');
 
 app.use(express.static(path.join(__dirname,'public')));
+app.use(express.json());
 
 app.set('view engine', 'ejs');
 
@@ -21,11 +22,3 @@ app.use('/', rutaMain);
 app.use('/', rutaProducts);
 app.use('/pr1', rutaProducts);
 app.use('/pr2', rutaProducts);
-
-
-
-
-
-
-
-
