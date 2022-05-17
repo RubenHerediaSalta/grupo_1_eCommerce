@@ -1,9 +1,7 @@
 const express = require('express'); 
-
+const router = express.Router();
+const path = require('path')
 const controllerLoginRegister = require('../controllers/userControllers.js')
-
-const router = express.Router(); 
-
 
 
 router.get('/login', controllerLoginRegister.login); 
