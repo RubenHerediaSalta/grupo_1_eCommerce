@@ -22,3 +22,4 @@ app.use('/', rutaMain);
 app.use('/', rutaProducts);
 app.use('/pr1', rutaProducts);
 app.use('/pr2', rutaProducts);
+app.use('/products', rutaProducts);

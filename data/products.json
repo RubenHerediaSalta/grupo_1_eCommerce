@@ -9,7 +9,7 @@
   "description": "Pantallas de alta frecuencia y GPUs competitivas, las notebooks TUF Gaming son duraderas, resistentes y ofrecen una experiencia de juego increíble. Memoria RAM: 8 GB - Tipo de memoria RAM: DDR4 - Memoria de video: 4 GB - Frecuencia de actualización de la pantalla: 144 Hz - Resolución de la pantalla: 1920 px x 1080 px - Con pantalla táctil: No - Tamaño de la pantalla: 15.6 ",
   "image": "notebook.png"
  },
-  {
+ {
   "id": 2,
   "name": "Monitor Led 24 ASUS 144Hz VP249QGR",
   "section": "monitores",
@@ -19,7 +19,7 @@
   "description": "23.8 pulgadas, Full HD, IPS, sin marco, 1ms MPRT, 144Hz, Adaptive-Sync (FreeSync™), ELMB, Shadow Boost, Low Blue Light, Flicker Free, montaje en pared",
   "image": "monitor.png"
  },
-  {
+ {
   "id": 3,
   "name": "Placa De Video GeForce RTX3070 8Gb EVGA Ultra",
   "section": "placasDeVideo",
@@ -48,5 +48,14 @@
   "category": "ofertas",
   "description": "Utiliza cable. Posee rueda de desplazamiento. Cuenta con 9 botones para un mayor control. Con luces para mejorar la experiencia de uso. Con sensor óptico. Resolución de 2500dpi.",
   "image": "mouse.png"
+ },
+ {
+  "id": 6,
+  "name": "Lenovo Legion Y520",
+  "section": "notebooks",
+  "price": "170000",
+  "discount": "15",
+  "description": "Marca: Lenovo\r\nModelo: Legion Y520 (80WK01AHAR)\r\n\r\nProcesador: Intel® Core™ i5-7300HQ (6M Cache, hasta 3.50 GHz)\r\n- Número de núcleos de procesador: 4 / 4 subprocesos\r\n- Frecuencia básica del procesador: 2.50 GHz\r\n- Frecuencia turbo máxima: 3.50 GHz\r\n- Caché inteligente Intel®: 6 MB\r\nDisco Rígido: 1TB 5400 RPM\r\nMemoria Ram: 8 GB DDR4 2400 MHz (Ampliable hasta 16GB)\r\nPantalla: 15.6\" FHD (1920 x 1080) IPS anti-glare\r\nVideo: NVIDIA® GeForce® GTX 1050 2 GB",
+  "image": "image-1652747585557.png"
  }
 ]
