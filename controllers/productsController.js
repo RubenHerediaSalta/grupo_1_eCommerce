@@ -9,7 +9,8 @@ const productsController = {
 
    
     editar: (req,res) => {
-        res.render ('./products/editProducts.ejs')
+        let producto = products.find(producto => producto.id == req.params.id);
+        res.render ('./products/editProducts', {producto})
     },
     cart: (req,res) => {
         res.render ('./products/productCart.ejs')
