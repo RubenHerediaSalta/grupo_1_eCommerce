@@ -7,22 +7,55 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
 
-   
     editar: (req,res) => {
-        res.render ('./products/editProducts.ejs')
+        let producto = products.find(producto => producto.id == req.params.id);
+        res.render ('./products/editProducts', {producto})
+    },
+
+    editarModif: (req,res) => {
+        let id = req.params.id; 
+        let productoEdit = products.find(producto => producto.id == id); 
+        let image 
+
+        if (req.file != undefined) {
+            image = req.file.filename;
+        } else {
+            image = "default-image.png";
+        }
+
+       productoEdit = {
+            id: productoEdit.id,
+            ...req.body,
+            image:image
+        }
+
+        let newProducts = products.map(products => {
+            if (products.id == productoEdit.id) {
+                return products = {...productoEdit}; 
+            }
+
+            return products; 
+        
+        })
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+        res.redirect('/')
+
+
+        
     },
     cart: (req,res) => {
-        res.render ('./products/productCart.ejs')
+        res.render ('./products/productCart')
     },
     index: (req, res) => {
-        res.render("./products/products.ejs", {products});
+        res.render("./products/products", {products});
     },
     detail: (req, res) => {
 		let producto = products.find(producto => producto.id == req.params.id);
 		res.render("./products/detail", {producto})
 	},
     create: (req, res) =>{
-        res.render ('./products/createProducts.ejs')
+        res.render ('./products/createProducts')
     },
     store: (req, res) =>{
         let image;
@@ -34,6 +67,8 @@ const productsController = {
         let newProduct = {
             id: products[products.length - 1].id + 1,
             ...req.body,
+            price: Number(req.body.price),
+            discount: Number(req.body.discount),
             image: image
         };
         products.push(newProduct);

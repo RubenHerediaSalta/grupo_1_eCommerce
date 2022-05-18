@@ -67,5 +67,46 @@
   "category": "ofertas",
   "description": "Introducir la descripción...",
   "image": "default-image.png"
+ },
+ {
+  "id": 8,
+  "image": "default-image.png"
+ },
+ {
+  "id": 9,
+  "name": "Santino",
+  "section": "placasDeVideo",
+  "price": null,
+  "discount": null,
+  "category": "ofertas",
+  "description": "santu",
+  "image": "image-1652836693790.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Santu",
+  "section": "notebooks",
+  "price": 0,
+  "discount": 0,
+  "description": "Introducir la descripción...",
+  "image": "default-image.png"
+ },
+ {
+  "id": 11,
+  "name": "santino quint",
+  "section": "placasDeVideo",
+  "price": 850,
+  "discount": 10,
+  "description": "mouse",
+  "image": "image-1652836851256.jpg"
+ },
+ {
+  "id": 12,
+  "name": "Pad",
+  "section": "perifericos",
+  "price": 500,
+  "discount": 10,
+  "description": "pad 15x15",
+  "image": "image-1652840788037.jpg"
  }
 ]

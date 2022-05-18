@@ -9,27 +9,26 @@
     
     <main class="register-main">
 
-        <form action="/editProducts" method="POST" enctype="multipart/form-data">
+        <form action="/editProducts/<%= producto.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
 
         <section class="register-custom">
-            <h4>EDITAR PRODUCTO</h4>
-            <input class="controls" type="text" name="idProducto" id="idProducto" placeholder="ID del Producto">
-            <input class="controls" type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del Producto">
-            <div class="controls"><label for="descripcionProducto">Descripción del Producto:</label>
-            <textarea style="width: 100% ; height: 80px;" name="descripcionProducto" id="descripcionProducto">Introducir la descripción...</textarea></div>
-            <div class="controls"><label for="categoriaProducto">Seccion :</label>
-            <select name="categoriaProducto" id="categoriaProducto" style="font-family: 'Audiowide';">
-                <option value="notebooks">NOTEBOOKS</option>
-                <option value="monitores">MONITORES</option>
-                <option value="placasdevideo">PLACAS DE VIDEO</option>
-                <option value="almacenamiento">ALMACENAMIENTO</option>
-                <option value="perifericos">PERIFERICOS</option>
-            </select></div>
-            <input class="controls" type="text" name="precioProducto" id="precioProducto" placeholder="Precio del Producto">
-            <input class="controls" type="text" name="descuentoProducto" id="descuentoProducto" placeholder="Descuento del Producto">
-            <p class="controls"> Producto en Oferta  <input type="checkbox" id="ofertaProducto" name="ofertaProducto" value="SI"></p>
-            <input class="controls" type="file" name="imagenProducto" id="imagenProducto" accept=".jpg,.png" multiple placeholder="Seleccionar Imagen">
-            <input class="boton" type="submit" value="Editar">
+            <h4>EDITAR <%= producto.name %></h4>
+            <input class="controls" type="text" name="name" id="name" placeholder="Nombre del Producto" value = <%= producto.name %> >
+            <div class="controls"><label for="section">Seccion :</label>
+                <select name="section" id="section" style="font-family: 'Audiowide';">
+                    <option value="notebooks">NOTEBOOKS</option>
+                    <option value="monitores">MONITORES</option>
+                    <option value="placasDeVideo">PLACAS DE VIDEO</option>
+                    <option value="almacenamiento">ALMACENAMIENTO</option>
+                    <option value="perifericos">PERIFERICOS</option>
+                </select></div>
+            <input class="controls" type="number" name="price" id="price" placeholder="Precio del Producto">
+            <input class="controls" type="number" name="discount" id="discount" placeholder="Descuento del Producto">
+            <p class="controls"> Producto en Oferta  <input type="checkbox" id="category" name="category" value="ofertas"></p>
+            <div class="controls"><label for="description">Descripción del Producto:</label>
+            <textarea style="width: 100% ; height: 80px;" name="description" id="description">Introducir la descripción...</textarea></div>
+            <input class="controls" type="file" name="image" id="image" accept=".jpg,.png" multiple placeholder="Seleccionar Imagen">
+            <input class="boton" type="submit" value="Agregar">
         </section>
         </form>
 
