@@ -1,4 +1,4 @@
-const loginRegisterController = {
+const userController = {
     login: (req,res) => {
         res.render ('./users/login.ejs')
     }, 
@@ -8,6 +8,6 @@ const loginRegisterController = {
 }; 
 
 
-module.exports = loginRegisterController; 
+module.exports = userController; 
 
 
