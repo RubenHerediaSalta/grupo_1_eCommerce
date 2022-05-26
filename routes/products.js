@@ -2,7 +2,7 @@ const express = require ('express');
 const path = require('path');
 const router = express.Router(); 
 const multer = require('multer');  
-const productsController = require('../controllers/productsController.js'); 
+const productsControllers = require('../controllers/productsControllers.js'); 
 
 //---------MULTER-------//
 const storage = multer.diskStorage({
@@ -16,19 +16,18 @@ const storage = multer.diskStorage({
 const upload = multer({storage: storage});
 
 //---------HOME DE PRODUCTOS-------//
-router.get('/products', productsController.index);
+router.get('/products', productsControllers.index);
 
 //---------DETALLE DE PRODUCTOS-------//
-router.get('/detail/:id/', productsController.detail);  
+router.get('/detail/:id/', productsControllers.detail);  
 
 //---------CREAR PRODUCTOS-------//
-router.get('/createProducts', productsController.create);
-router.post('/', upload.single('image'), productsController.store)
+router.get('/createProducts', productsControllers.create);
+router.post('/', upload.single('image'), productsControllers.store)
 
 //---------EDITAR PRODUCTOS-------//
-router.get('/editProducts/:id/', productsController.editar);
-router.put('/editProducts/:id/', productsController.editarModif); 
-
+router.get('/editProducts/:id/', productsControllers.editar);
+router.put('/editProducts/:id/', upload.any(),productsControllers.editarModif); 
 
 
 //----------BORRAR PRODUCTOS-----------//
@@ -36,7 +35,7 @@ router.put('/editProducts/:id/', productsController.editarModif);
 router.delete('/editProducts/:id/', productsController.delete); 
 
  //---------CARRITO DE PRODUCTOS-------//
-router.get('/productCart', productsController.cart); 
+router.get('/productCart', productsControllers.cart); 
 
 
 module.exports = router 
