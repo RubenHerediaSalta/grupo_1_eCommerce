@@ -51,12 +51,11 @@
  },
  {
   "id": 6,
-  "name": "Lenovo Legion Y520",
+  "name": "editado123",
   "section": "notebooks",
-  "price": 170000,
-  "discount": 10,
-  "category": "ofertas",
-  "description": "LENOVO LEGION Y520",
-  "image": "image-1652920144481.png"
+  "price": "",
+  "discount": "",
+  "description": "Introducir la descripción...",
+  "image": "image-1653533126932.jpg"
  }
 ]

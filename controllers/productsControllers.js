@@ -8,32 +8,33 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productsController = {
 
     editar: (req,res) => {
-        let producto = products.find(producto => producto.id == req.params.id);
-        res.render ('./products/editProducts', {producto})
+        let id = req.params.id
+        let productoEdit = products.find(producto => producto.id == id);
+        res.render ('./products/editProducts', {productoEdit})
     },
 
     editarModif: (req,res) => {
         let id = req.params.id; 
-        let productoEdit = products.find(producto => producto.id == id); 
+        let productoEdit = products.find(producto => producto.id == id)
         let image 
 
-        if (req.file != undefined) {
-            image = req.file.filename;
+        if (req.files[0] != undefined) {
+            image = req.files[0].filename
         } else {
-            image = "default-image.png";
+            image = productoEdit.image
         }
 
        productoEdit = {
             id: productoEdit.id,
             ...req.body,
-            image:image
+            image:image,
         }
 
-        let newProducts = products.map(products => {
-            if (products.id == productoEdit.id) {
-                return products = {...productoEdit}; 
+        let newProducts = products.map(producto => {
+            if (producto.id == productoEdit.id) {
+                return producto = {...productoEdit}; 
             }
-            return products; 
+            return producto;
         })
 
         fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));

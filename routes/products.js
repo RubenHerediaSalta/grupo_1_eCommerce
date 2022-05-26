@@ -27,7 +27,7 @@ router.post('/', upload.single('image'), productsControllers.store)
 
 //---------EDITAR PRODUCTOS-------//
 router.get('/editProducts/:id/', productsControllers.editar);
-router.put('/editProducts/:id/', productsControllers.editarModif); 
+router.put('/editProducts/:id/', upload.any(),productsControllers.editarModif); 
 
  //---------CARRITO DE PRODUCTOS-------//
 router.get('/productCart', productsControllers.cart); 
