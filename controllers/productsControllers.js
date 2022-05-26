@@ -37,8 +37,7 @@ const productsController = {
             return producto;
         })
 
-        fs.write
-        FileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+        fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
         res.redirect('/')
 
     },

@@ -22,11 +22,9 @@ app.listen(2022 ,()=>{
     console.log('Custom on')
 });
 
-
+/*---------------APP USE----------------*/
 app.use('/', rutaUser);
 app.use('/usuario', rutaUser);
 app.use('/', rutaMain);
 app.use('/', rutaProducts);
-app.use('/pr1', rutaProducts);
-app.use('/pr2', rutaProducts);
 app.use('/products', rutaProducts);
