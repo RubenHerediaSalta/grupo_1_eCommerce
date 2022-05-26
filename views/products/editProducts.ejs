@@ -29,8 +29,17 @@
             <textarea style="width: 100% ; height: 80px;" name="description" id="description">Introducir la descripción...</textarea></div>
             <input class="controls" type="file" name="image" id="image" accept=".jpg,.png" multiple placeholder="Seleccionar Imagen">
             <input class="boton" type="submit" value="Agregar">
-        </section>
+            
+            </section>
         </form>
+
+        <form method="POST" action="/editProducts/<%= producto.id %>/?_method=DELETE">
+            <input class="boton" type="submit" value="Borrar"> 
+
+            
+
+        </form>
+
 
     </main>
 

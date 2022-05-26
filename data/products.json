@@ -73,16 +73,6 @@
   "image": "default-image.png"
  },
  {
-  "id": 9,
-  "name": "Santino",
-  "section": "placasDeVideo",
-  "price": null,
-  "discount": null,
-  "category": "ofertas",
-  "description": "santu",
-  "image": "image-1652836693790.jpg"
- },
- {
   "id": 10,
   "name": "Santu",
   "section": "notebooks",
@@ -90,15 +80,6 @@
   "discount": 0,
   "description": "Introducir la descripción...",
   "image": "default-image.png"
- },
- {
-  "id": 11,
-  "name": "santino quint",
-  "section": "placasDeVideo",
-  "price": 850,
-  "discount": 10,
-  "description": "mouse",
-  "image": "image-1652836851256.jpg"
  },
  {
   "id": 12,

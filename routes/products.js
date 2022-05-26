@@ -30,6 +30,11 @@ router.get('/editProducts/:id/', productsController.editar);
 router.put('/editProducts/:id/', productsController.editarModif); 
 
 
+
+//----------BORRAR PRODUCTOS-----------//
+
+router.delete('/editProducts/:id/', productsController.delete); 
+
  //---------CARRITO DE PRODUCTOS-------//
 router.get('/productCart', productsController.cart); 
 
