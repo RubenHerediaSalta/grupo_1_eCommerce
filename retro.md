@@ -8,3 +8,11 @@ La dinamica del grupo es fluida, colaborativa, con buena comunicacion y compromi
 Por empezar un compañero lamentablemente no pudo continuar con el curso lo que llevo a que tengamos que reacomodar todas las tareas que ya habiamos distribuido.
 Aun seguimos teniendo problemas con las reuniones grupales donde no podemos estar siempre todos los participantes.
 Por otro lado cabe destacar que mejoro el trabajo individual en las tareas asignadas y en reuniones cortas compartir lo que cada uno fue haciendo y ayudar en lo que se pueda al compañero que se encuentre estancado.
+
+
+
+----Retro 4to Sprint------
+
+Personalmente fue un sprint bastante complicado para mi (Santino) se llegó a un punto en el que habia que aplicar todo lo que aprendimos en la cursada y se hacia dificil, tuve que hacer una repasada general de la mayoria de los temas para que me cierren todos los conceptos.
+Mi compañero Ruben supo adaptarse mejor, de todas formas pudimos tener feedback mutuo y ayudarnos entre los dos. Actualmente somos dos y estamos bastante contentos con los resultados de como venimos llevando el proyecto, sin duda esperamos con ansias el quinto sprint. 
+  

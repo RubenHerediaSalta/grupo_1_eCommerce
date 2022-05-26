@@ -20,4 +20,6 @@ LINK A WIREFRAMES
 https://miro.com/app/board/uXjVOAplg4U=/?invite_link_id=612826953958
 
 LINK A TABLEROS
-https://trello.com/invite/b/FEWkaXaQ/c5323d5191b09262ede48570ba087d2f/custom-web
+https://trello.com/b/FEWkaXaQ/custom-web
+
+
