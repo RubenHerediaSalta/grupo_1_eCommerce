@@ -48,14 +48,5 @@
   "category": "ofertas",
   "description": "Utiliza cable. Posee rueda de desplazamiento. Cuenta con 9 botones para un mayor control. Con luces para mejorar la experiencia de uso. Con sensor óptico. Resolución de 2500dpi.",
   "image": "mouse.png"
- },
- {
-  "id": 6,
-  "name": "editado123",
-  "section": "notebooks",
-  "price": "",
-  "discount": "",
-  "description": "Introducir la descripción...",
-  "image": "image-1653533126932.jpg"
  }
 ]
