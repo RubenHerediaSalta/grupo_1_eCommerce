@@ -32,7 +32,7 @@ router.put('/editProducts/:id/', upload.any(),productsControllers.editarModif);
 
 //----------BORRAR PRODUCTOS-----------//
 
-router.delete('/editProducts/:id/', productsController.delete); 
+router.delete('/editProducts/:id/', productsControllers.delete); 
 
  //---------CARRITO DE PRODUCTOS-------//
 router.get('/productCart', productsControllers.cart); 
