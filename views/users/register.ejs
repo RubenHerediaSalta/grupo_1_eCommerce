@@ -8,7 +8,7 @@
 
     <main class="register-main">
 
-        <form action="/register" method="POST">
+        <form action="/register" method="POST" enctype="multipart/form-data">
 
         <section class="register-custom">
             <h4>REGISTRARSE</h4>
@@ -17,6 +17,8 @@
             <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su Correo">
             <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
             <input class="controls" type="password" name="password" id="password" placeholder="Confirme su contraseña">
+            <div class="controls"><label for="avatar">Imagen de Perfil:</label>
+            <input class="controls" type="file" name="avatar" id="avatar" accept=".jpg,.png" multiple placeholder="Seleccionar Imagen"></div>
             <p class="term-c">Estoy de acuerdo con <a href="#">Terminos y condiciones </a><input type="checkbox" id="huey" name="drone" value="Acepto"></p>
             <input class="boton" type="submit" value="Registrar">
             <p class="ya-acc"><a href="/login">¿Ya tenés cuenta?</a></p>

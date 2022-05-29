@@ -1,6 +1,6 @@
 const express = require ('express');
-const path = require('path');
 const router = express.Router(); 
+const path = require('path');
 const multer = require('multer');  
 const productsControllers = require('../controllers/productsControllers.js'); 
 
@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
     }
 })
-const upload = multer({storage: storage});
+let upload = multer({storage: storage});
 
 //---------HOME DE PRODUCTOS-------//
 router.get('/products', productsControllers.index);

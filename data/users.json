@@ -1,7 +1,72 @@
 [
-{"id":1,"firstName":"Jobie","lastName":"Lavis","email":"jlavis0@unc.edu","password":"CnubIXF0U","category":"user","image":"user_1.jpg"},
-{"id":2,"firstName":"Zorine","lastName":"Dunkerk","email":"zdunkerk1@chronoengine.com","password":"PT9V3g7ApH","category":"user","image":"user_2.jpg"},
-{"id":3,"firstName":"Marge","lastName":"Pawley","email":"mpawley2@wikia.com","password":"EsDkSm","category":"user","image":"user_3.jpg"},
-{"id":4,"firstName":"Kimberlyn","lastName":"Cram","email":"kcram3@google.pl","password":"Yw2kUz","category":"user","image":"user_4.jpg"},
-{"id":5,"firstName":"Shelden","lastName":"Wiffield","email":"swiffield4@t-online.de","password":"W6Yjjv6Fu3u","category":"user","image":"user_5.jpg"}
+ {
+  "id": 1,
+  "firstName": "Jobie",
+  "lastName": "Lavis",
+  "email": "jlavis0@unc.edu",
+  "password": "CnubIXF0U",
+  "category": "user",
+  "image": "user_1.jpg"
+ },
+ {
+  "id": 2,
+  "firstName": "Zorine",
+  "lastName": "Dunkerk",
+  "email": "zdunkerk1@chronoengine.com",
+  "password": "PT9V3g7ApH",
+  "category": "user",
+  "image": "user_2.jpg"
+ },
+ {
+  "id": 3,
+  "firstName": "Marge",
+  "lastName": "Pawley",
+  "email": "mpawley2@wikia.com",
+  "password": "EsDkSm",
+  "category": "user",
+  "image": "user_3.jpg"
+ },
+ {
+  "id": 4,
+  "firstName": "Kimberlyn",
+  "lastName": "Cram",
+  "email": "kcram3@google.pl",
+  "password": "Yw2kUz",
+  "category": "user",
+  "image": "user_4.jpg"
+ },
+ {
+  "id": 5,
+  "firstName": "Shelden",
+  "lastName": "Wiffield",
+  "email": "swiffield4@t-online.de",
+  "password": "W6Yjjv6Fu3u",
+  "category": "user",
+  "image": "user_5.jpg"
+ },
+ {
+  "id": 6,
+  "avatar": "default-image.png"
+ },
+ {
+  "id": 7,
+  "firstName": "prueba123",
+  "lastName": "test123",
+  "email": "hand@kjbk.com123",
+  "password": [
+   "123",
+   "123"
+  ],
+  "drone": "Acepto",
+  "avatar": "avatar-1653840871569.jpg"
+ },
+ {
+  "id": 8,
+  "firstName": "prueba223",
+  "lastName": "test33",
+  "email": "hand@kjbk.com123",
+  "password": "$2a$10$dYfwgp0YowdM6IM9RqnHLOPy3RyTxrZ79k7qNw/rv/EZEpuzHg5H2",
+  "drone": "Acepto",
+  "avatar": "avatar-1653847504534.jpg"
+ }
 ]
