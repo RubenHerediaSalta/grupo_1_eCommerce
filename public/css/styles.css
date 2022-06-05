@@ -436,7 +436,21 @@ a:hover{
     font-family:'Audiowide', sans-serif;
     font-size: 18px;
 }
-
+::placeholder{
+    color: white;
+    opacity: 1;
+}
+.errorform{
+    width: 100%;
+    background-color: darkred;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    border: 2px solid orange;
+    font-family:'Audiowide', sans-serif;
+    font-size: 18px;
+}
 .register-custom p {
     height: 40px;
     text-align: center;

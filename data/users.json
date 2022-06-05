@@ -46,27 +46,20 @@
  },
  {
   "id": 6,
-  "avatar": "default-image.png"
+  "firstName": "prueba",
+  "lastName": "teseira",
+  "email": "hand@kjbk.com",
+  "password": "$2a$10$CCilEPb7D02s8rm10PUia.d4jKI3aBd3WJnSur4CxupGA1SVHC3ju",
+  "drone": "Acepto",
+  "avatar": "avatar-1654375103485.jpg"
  },
  {
   "id": 7,
-  "firstName": "prueba123",
-  "lastName": "test123",
-  "email": "hand@kjbk.com123",
-  "password": [
-   "123",
-   "123"
-  ],
+  "firstName": "rodrigo",
+  "lastName": "teseira",
+  "email": "hand@kj333bk.com",
+  "password": "$2a$10$8W5CKx5KOPNuTHH4nwrnfu6rGlQjsvy2p.2S.ti1/rmA/EIvPlciy",
   "drone": "Acepto",
-  "avatar": "avatar-1653840871569.jpg"
- },
- {
-  "id": 8,
-  "firstName": "prueba223",
-  "lastName": "test33",
-  "email": "hand@kjbk.com123",
-  "password": "$2a$10$dYfwgp0YowdM6IM9RqnHLOPy3RyTxrZ79k7qNw/rv/EZEpuzHg5H2",
-  "drone": "Acepto",
-  "avatar": "avatar-1653847504534.jpg"
+  "avatar": "avatar-1654375152137.jpg"
  }
 ]
