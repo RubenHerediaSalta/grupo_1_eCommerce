@@ -24,8 +24,6 @@ app.listen(2022 ,()=>{
 });
 
 /*---------------APP USE----------------*/
-app.use('/', rutaUser);
-app.use('/usuario', rutaUser);
 app.use('/', rutaMain);
-app.use('/', rutaProducts);
+app.use('/users', rutaUser);
 app.use('/products', rutaProducts);

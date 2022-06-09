@@ -26,6 +26,8 @@ const productsController = {
        productoEdit = {
             id: productoEdit.id,
             ...req.body,
+            price: Number(req.body.price),
+            discount: Number(req.body.discount),
             image:image,
         }
 
@@ -37,7 +39,7 @@ const productsController = {
         })
 
         fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-        res.redirect('/')
+        res.redirect('/products')
 
     },
     cart: (req,res) => {
@@ -74,10 +76,10 @@ const productsController = {
 
     delete: (req,res) => {
         let id = req.params.id; 
-        let borrarProducto = products.filter(borrar => borrar.id != id); 
+        let borrarProducto = products.filter(borrar => borrar.id != id);
 
         fs.writeFileSync(productsFilePath, JSON.stringify(borrarProducto, null, ' '));
-        res.redirect('/'); 
+        res.redirect('/products'); 
     }
 }
 

@@ -48,5 +48,24 @@
   "category": "ofertas",
   "description": "Utiliza cable. Posee rueda de desplazamiento. Cuenta con 9 botones para un mayor control. Con luces para mejorar la experiencia de uso. Con sensor óptico. Resolución de 2500dpi.",
   "image": "mouse.png"
+ },
+ {
+  "id": 9,
+  "name": "rx 6900",
+  "section": "placasDeVideo",
+  "price": 321321,
+  "discount": 32,
+  "category": "ofertas",
+  "description": "CGHVJBKL657890UIYTFU768767675768",
+  "image": "image-1654738515975.png"
+ },
+ {
+  "id": 10,
+  "name": "prueba123",
+  "section": "almacenamiento",
+  "price": 4211233,
+  "discount": 15,
+  "description": "Introducir la 8UYGHJ8Y7UGBHJ\r\n\r\nOHULK7\r\n\r\nIUIJKH...",
+  "image": "image-1654738548702.jpg"
  }
 ]

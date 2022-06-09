@@ -8,7 +8,7 @@ const productsControllers = require('../controllers/productsControllers.js');
 const uploadProduct = require('../middlewares/multerMiddlewareProducts');
 
 //---------HOME DE PRODUCTOS-------//
-router.get('/products', productsControllers.index);
+router.get('/', productsControllers.index);
 
 //---------DETALLE DE PRODUCTOS-------//
 router.get('/detail/:id/', productsControllers.detail);  
