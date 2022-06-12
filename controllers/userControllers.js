@@ -57,7 +57,7 @@ const userController = {
             return res.render('./users/register.ejs', {
                 errors: {
                     email: {
-                        msg: 'EL CORREO YA ESTA EN USO'
+                        msgg: 'EL CORREO YA ESTA EN USO'
                     }
                 },
                 oldData: req.body
