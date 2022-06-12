@@ -61,5 +61,21 @@
   "password": "$2a$10$8W5CKx5KOPNuTHH4nwrnfu6rGlQjsvy2p.2S.ti1/rmA/EIvPlciy",
   "drone": "Acepto",
   "avatar": "avatar-1654375152137.jpg"
+ },
+ {
+  "id": 8,
+  "firstName": "probando",
+  "lastName": "probando",
+  "email": "probando@gmail.com",
+  "password": "$2a$10$K1Y5il7E/fD0YBPaG.a09uM.INOrKrldjLElsVtVKBj/X2x/0o.xy",
+  "avatar": "default-image.png"
+ },
+ {
+  "id": 9,
+  "firstName": "prueba1",
+  "lastName": "qweqwe",
+  "email": "prueba1@gmail.com",
+  "password": "$2a$10$l7Frp8feYLxHi9jDc/yM8OSe8Zs9hbPmDwG3eHG0rMoi76EbS.86i",
+  "avatar": "default-image.png"
  }
 ]

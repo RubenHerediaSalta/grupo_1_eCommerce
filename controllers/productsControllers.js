@@ -59,9 +59,7 @@ const productsController = {
         let image;
         if (req.file != undefined) {
             image = req.file.filename;
-        } else {
-            image = "default-image.png";
-        }
+        } else {image = "default-image.png"}
         let newProduct = {
             id: products[products.length - 1].id + 1,
             ...req.body,

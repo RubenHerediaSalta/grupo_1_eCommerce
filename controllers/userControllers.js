@@ -1,13 +1,44 @@
-const bcrypt = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
-
+const User = require('../models/User')
 
 const userController = {
     login: (req,res) => {
         res.render ('./users/login.ejs')
-    }, 
+    },
+    loginProcess: (req, res) => {
+        let userToLogin = User.findByField('email', req.body.email);
+        if(userToLogin){
+            let passwordOK = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if(passwordOK){
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                return res.redirect('./profile')
+            }
+            return res.render('./users/login.ejs', {
+                errors: {
+                    email: {
+                        msg: 'CREDENCIALES INVALIDAS'
+                    }
+                }
+            });
+        }
+
+       return res.render('./users/login.ejs', {
+        errors: {
+            email: {
+                msg: 'CREDENCIALES INVALIDAS'
+            }
+        }
+    });
+    },
+    profile: (req, res) => {
+        return res.render('./users/profile', {
+			user: req.session.userLogged
+		});
+	},
     register: (req,res) => {
         res.render ('./users/register.ejs')
     },
@@ -15,14 +46,38 @@ const userController = {
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
-            res.render('./users/register',{
+             return res.render('./users/register',{
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
         }
-        return res.send('Ok, las validaciones se pasaron y no tienes errores');
+
+        let userInDB = User.findByField('email', req.body.email)
+        if(userInDB){
+            return res.render('./users/register.ejs', {
+                errors: {
+                    email: {
+                        msg: 'EL CORREO YA ESTA EN USO'
+                    }
+                },
+                oldData: req.body
+            })
+        }
+
+        let avatar;
+        if (req.file != undefined) {
+            avatar = req.file.filename;
+        } else {avatar = "default-image.png"}
+        let userToCreate = {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            avatar: avatar
+        }
+
+        User.create(userToCreate)
+        return res.render('./users/login.ejs');
     }
 }; 
 
 
-module.exports = userController; 
+module.exports = userController;

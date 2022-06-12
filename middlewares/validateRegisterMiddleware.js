@@ -1,6 +1,7 @@
+const path = require('path');
 const { body } = require('express-validator');
 
-const validations = [
+module.exports = [
     body('firstName').notEmpty().withMessage('Escribe tu nombre'),
     body('lastName').notEmpty().withMessage('Escribe tu nombre'),
     body('password').notEmpty().withMessage('Selecciona un color'),
@@ -12,5 +13,3 @@ const validations = [
         }return true
     })*/
 ]
-
-module.exports = validations

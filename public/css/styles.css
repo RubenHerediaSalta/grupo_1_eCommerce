@@ -401,7 +401,7 @@ a:hover{
     margin-top: 100px;
     border-radius: 4px;
     font-family:'Audiowide', sans-serif;
-    color: white;
+    color: darkred;
     box-shadow: 6px 14px 37px #000; 
 }
 
@@ -592,3 +592,4 @@ a:hover{
     .footinfo{
         flex-direction: row;
     }
+}

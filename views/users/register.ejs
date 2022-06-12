@@ -12,15 +12,14 @@
 
             <section class="register-custom">
                 <h4>REGISTRARSE</h4>
+
                 <input class="controls <%= locals.errors && errors.firstName ? 'errorform' : null %>" type="text" name="firstName" id="firstName" placeholder="Ingrese su Nombre" value="<%= locals.oldData ? oldData.firstName : null %>">
                 
                 <input class="controls <%= locals.errors && errors.lastName ? 'errorform' : null %>" type="text" name="lastName" id="lastName" placeholder="Ingrese su Apellido" value="<%= locals.oldData ? oldData.lastName : null %>">
-               
+               <% if (locals.errors && errors.email) { %> <%= errors.email.msg %><% } %>
                 <input class="controls <%= locals.errors && errors.email ? 'errorform' : null %>" type="email" name="email" id="email" placeholder="Ingrese su Correo" value="<%= locals.oldData ? oldData.email : null %>">
                
                 <input class="controls <%= locals.errors && errors.password ? 'errorform' : null %>" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
-                
-                <input class="controls <%= locals.errors && errors.password ? 'errorform' : null %>" type="password" name="password" id="password" placeholder="Confirme su contraseña">
               
                 <div class="controls"><label for="avatar">Imagen de Perfil:</label>
                 <input class="controls" type="file" name="avatar" id="avatar" accept=".jpg,.png" multiple placeholder="Seleccionar Imagen"></div>

@@ -13,8 +13,12 @@
 
         <section class="register-custom">
             <h4>BIENVENIDO DE NUEVO</h4>
-            <input class="controls" type="email" name="correos" id="correo" placeholder="Ingrese su Correo">
-            <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
+
+            <% if (locals.errors && errors.email) { %> <%= errors.email.msg %><% } %>
+            <input class="controls <%= locals.errors && errors.email ? 'errorform' : null %>" type="email" name="email" placeholder="Ingrese su Correo">
+            
+            <input class="controls <%= locals.errors && errors.email ? 'errorform' : null %>" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+            
             <p class="recordar-pw"> Recordar mi contraseña  <input type="checkbox" id="huey" name="drone" value="Acepto"></p>
             <input class="boton" type="submit" value="Ingresar">
             <p class="no-tenes-acc"><a href="/users/register">¿No tenés cuenta? Registrate ahora mismo.</a></p>

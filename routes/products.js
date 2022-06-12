@@ -23,7 +23,6 @@ router.put('/editProducts/:id/', uploadProduct.any(),productsControllers.editarM
 
 
 //----------BORRAR PRODUCTOS-----------//
-
 router.delete('/editProducts/:id/', productsControllers.delete); 
 
  //---------CARRITO DE PRODUCTOS-------//
