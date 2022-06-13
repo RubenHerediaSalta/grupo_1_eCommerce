@@ -15,6 +15,11 @@ const userController = {
             if(passwordOK){
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
+
+                if(req.body.drone){
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60)* 5})
+                }
+
                 return res.redirect('./profile')
             }
             return res.render('./users/login.ejs', {
@@ -39,6 +44,11 @@ const userController = {
 			user: req.session.userLogged
 		});
 	},
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy()
+        return res.redirect('/')
+	},
     register: (req,res) => {
         res.render ('./users/register.ejs')
     },
@@ -57,7 +67,7 @@ const userController = {
             return res.render('./users/register.ejs', {
                 errors: {
                     email: {
-                        msgg: 'EL CORREO YA ESTA EN USO'
+                        msg: 'EL CORREO YA ESTA EN USO'
                     }
                 },
                 oldData: req.body

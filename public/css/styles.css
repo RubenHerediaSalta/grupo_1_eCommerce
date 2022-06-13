@@ -270,15 +270,16 @@ a:hover{
 }
 .pdimg{
     display: flex;
+    background-image: url("/images/backhead.jpg");
     width: 40%;
     height: 300px;
     transition: all 600ms;
     justify-content: space-around;
 }
-.pdimg:hover {
+/*.pdimg img:hover {
     transform: scale(1.5);
     
-}
+}*/
 .botoncarrito button:hover{
     background-color: blue;
 }
