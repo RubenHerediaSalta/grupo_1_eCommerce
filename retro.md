@@ -11,8 +11,12 @@ Por otro lado cabe destacar que mejoro el trabajo individual en las tareas asign
 
 
 
-----Retro 4to Sprint------
+----Retro 4to Sprint-----
 
 Personalmente fue un sprint bastante complicado para mi (Santino) se llegó a un punto en el que habia que aplicar todo lo que aprendimos en la cursada y se hacia dificil, tuve que hacer una repasada general de la mayoria de los temas para que me cierren todos los conceptos.
 Mi compañero Ruben supo adaptarse mejor, de todas formas pudimos tener feedback mutuo y ayudarnos entre los dos. Actualmente somos dos y estamos bastante contentos con los resultados de como venimos llevando el proyecto, sin duda esperamos con ansias el quinto sprint. 
   
+
+----Retro 5to Sprint-----
+
+Sin dudas es un sprint clave de la cursada, destacamos mucho los dos videos de register/login. Ese contenido nos supo salvar la vida, ya que explican el paso a paso de cada metodo y ayuda a quedar todo mucho más claro.
