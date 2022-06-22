@@ -8,7 +8,7 @@
 
 
     <section class="carrou">
-        <div class="carrou"><img src="images/carrousel1.png" alt=""></div>
+        <div class="carrou"><img src="images/gaming.gif" height="300px"></div>
     </section>
     
     <main>
@@ -19,7 +19,7 @@
 				let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
 			%>
             <div class="prod">
-            <a href="/detail/<%= product.id %>"><p class="pop"><%= product.description%></p>
+            <a href="/products/detail/<%= product.id %>"><p class="pop"><%= product.description%></p>
             <img src="images/products/<%= product.image%>" alt="">
             <div class="info">
                 <div class="precio-disc">

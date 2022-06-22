@@ -9,7 +9,7 @@
     
     <main class="register-main">
 
-        <form action="/editProducts/<%= productoEdit.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/products/editProducts/<%= productoEdit.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
 
         <section class="register-custom">
             <h4>EDITAR <%= productoEdit.name %></h4>
@@ -30,7 +30,7 @@
             <input class="controls" type="file" name="image" id="image" accept=".jpg,.png" multiple placeholder="Seleccionar Imagen">
             <input class="boton" type="submit" value="Editar">
               </form>
-              <form method="POST" action="/editProducts/<%= productoEdit.id %>/?_method=DELETE">
+              <form method="POST" action="/products/editProducts/<%= productoEdit.id %>/?_method=DELETE">
                 <input class="boton" type="submit" value="Borrar"> 
               </form>
             </section>

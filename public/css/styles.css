@@ -270,15 +270,16 @@ a:hover{
 }
 .pdimg{
     display: flex;
+    background-image: url("/images/backhead.jpg");
     width: 40%;
     height: 300px;
     transition: all 600ms;
     justify-content: space-around;
 }
-.pdimg:hover {
+/*.pdimg img:hover {
     transform: scale(1.5);
     
-}
+}*/
 .botoncarrito button:hover{
     background-color: blue;
 }
@@ -401,7 +402,7 @@ a:hover{
     margin-top: 100px;
     border-radius: 4px;
     font-family:'Audiowide', sans-serif;
-    color: white;
+    color: darkred;
     box-shadow: 6px 14px 37px #000; 
 }
 
@@ -436,7 +437,21 @@ a:hover{
     font-family:'Audiowide', sans-serif;
     font-size: 18px;
 }
-
+::placeholder{
+    color: white;
+    opacity: 1;
+}
+.errorform{
+    width: 100%;
+    background-color: darkred;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    border: 2px solid orange;
+    font-family:'Audiowide', sans-serif;
+    font-size: 18px;
+}
 .register-custom p {
     height: 40px;
     text-align: center;
@@ -515,6 +530,13 @@ a:hover{
     color:wheat 
 }
 
+/* ------------------PERFIL DE USUARIO ------------------- */ 
+
+.avatar img{
+    width: 100%;
+    border-radius: 100%;
+    border: 4px solid black
+}
 
 /*-------------------------------------------------*/
 @media (min-width: 768px) {
@@ -578,3 +600,4 @@ a:hover{
     .footinfo{
         flex-direction: row;
     }
+}

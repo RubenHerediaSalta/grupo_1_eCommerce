@@ -1,7 +1,7 @@
 <header>
     <div class="fulllogo">
 
-        <a href="/"><div class="logo"><img src="/images/logogif.gif" width="150" height="150" alt=""></i></div></a>
+        <a href="/"><div class="logo"><img src="/images/giflogo.gif" width="150" height="150" alt=""></i></div></a>
 
         <div class="search">
           
@@ -17,22 +17,29 @@
             </form>
         </div>
 
-        <a href="/productCart"><div class="carrito"><i class="fa-solid fa-cart-shopping"></i></div></a>
+        <a href="/products/productCart"><div class="carrito"><i class="fa-solid fa-cart-shopping"></i></div></a>
     </div>
     
-            <nav class="categorias">
-                <ul class="catg" type="none">
-                    <li><a href="#">NOTEBOOKS</a></li>
-                    <li><a href="#">MONITORES</a></li>
-                    <li><a href="#">PLACAS DE VIDEO</a></li>
-                    <li><a href="#">ALMACENAMIENTO</a></li>
-                    <li><a href="#">PERIFERICOS</a></li>
-                    <li><a href="/products">GENERAL</a></li>
-                    <li><a href="/register">REGISTRARSE</a></li>
-                    <li><a href="/login">INGRESAR</a></li>
-                    <li><a href="/createProducts">NUEVO PRODUCTO</a></li>
-                </ul>
-            </nav>
+    <nav class="categorias">
+        <ul class="catg" type="none">
+            <li><a href="#">NOTEBOOKS</a></li>
+            <li><a href="#">MONITORES</a></li>
+            <li><a href="#">PLACAS DE VIDEO</a></li>
+            <li><a href="#">ALMACENAMIENTO</a></li>
+            <li><a href="#">PERIFERICOS</a></li>
+            <li><a href="/products">GENERAL</a></li>
+            <% if (locals.isLogged) { %>
+            <li><a href="/users/profile">MI CUENTA</a></li>
+            <li><a href="/users/logout">CERRAR SESION</a></li>
+            <% } else { %>
+            <li><a href="/users/register">REGISTRARSE</a></li>
+            <li><a href="/users/login">INGRESAR</a></li>
+            <% } %>
+            <% if (locals.isLogged && locals.admin == true) { %>
+            <li><a href="/products/createProducts">NUEVO PRODUCTO</a></li>
+            <% } %>
+        </ul>
+    </nav>
     
             <div class="burger-menu">
                 <i class="fas fa-bars"></i>

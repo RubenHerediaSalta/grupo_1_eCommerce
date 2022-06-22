@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -27,6 +26,8 @@ const productsController = {
        productoEdit = {
             id: productoEdit.id,
             ...req.body,
+            price: Number(req.body.price),
+            discount: Number(req.body.discount),
             image:image,
         }
 
@@ -38,7 +39,7 @@ const productsController = {
         })
 
         fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-        res.redirect('/')
+        res.redirect('/products')
 
     },
     cart: (req,res) => {
@@ -58,9 +59,7 @@ const productsController = {
         let image;
         if (req.file != undefined) {
             image = req.file.filename;
-        } else {
-            image = "default-image.png";
-        }
+        } else {image = "default-image.png"}
         let newProduct = {
             id: products[products.length - 1].id + 1,
             ...req.body,
@@ -75,10 +74,10 @@ const productsController = {
 
     delete: (req,res) => {
         let id = req.params.id; 
-        let borrarProducto = products.filter(borrar => borrar.id != id); 
+        let borrarProducto = products.filter(borrar => borrar.id != id);
 
         fs.writeFileSync(productsFilePath, JSON.stringify(borrarProducto, null, ' '));
-        res.redirect('/'); 
+        res.redirect('/products'); 
     }
 }
 

@@ -3,11 +3,18 @@ const path = require("path");
 const express = require("express");
 const methodOverride = require('method-override');
 const app = express();
+const session = require('express-session');
+const cookies = require('cookie-parser');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 /*---------------MIDDLEWARE----------------*/
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.json());
-app.use(methodOverride("_method"))
+app.use(methodOverride("_method"));
+app.use(session({secret: "Secret",resave: false,saveUninitialized: false,}));
+app.use(cookies());
+app.use(userLoggedMiddleware);
+app.use(express.urlencoded({ extended: false }));
 
 /*---------------TEMPLATE ENGINE----------------*/
 app.set('view engine', 'ejs');
@@ -23,8 +30,6 @@ app.listen(2022 ,()=>{
 });
 
 /*---------------APP USE----------------*/
-app.use('/', rutaUser);
-app.use('/usuario', rutaUser);
 app.use('/', rutaMain);
-app.use('/', rutaProducts);
+app.use('/users', rutaUser);
 app.use('/products', rutaProducts);

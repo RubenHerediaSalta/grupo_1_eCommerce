@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+     <!-- Head -->
+    <%- include('./../partials/head') %>
+<body>
+
+     <!-- Header -->
+     <%- include('./../partials/header') %>
+    
+     <main class="register-main">
+
+        <section class="register-custom">
+            
+            <div class="avatar"><img src="/images/users/<%= user.avatar %>"></div>
+            
+            <h4>BIENVENIDO DE NUEVO <%= user.firstName %></h4>
+
+            <h3><%= user.email %></h3>
+
+        
+        </section>
+
+    </main>
+
+     <!-- Footer -->
+     <%- include('./../partials/footer') %>
+     
+</body>
+</html>
