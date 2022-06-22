@@ -80,6 +80,7 @@ const userController = {
         } else {avatar = "default-image.png"}
         let userToCreate = {
             ...req.body,
+            admin: false,
             password: bcryptjs.hashSync(req.body.password, 10),
             avatar: avatar
         }

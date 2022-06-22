@@ -35,8 +35,9 @@
             <li><a href="/users/register">REGISTRARSE</a></li>
             <li><a href="/users/login">INGRESAR</a></li>
             <% } %>
+            <% if (locals.isLogged && locals.admin == true) { %>
             <li><a href="/products/createProducts">NUEVO PRODUCTO</a></li>
-           
+            <% } %>
         </ul>
     </nav>
     

@@ -50,16 +50,6 @@
   "image": "mouse.png"
  },
  {
-  "id": 9,
-  "name": "rx 6900",
-  "section": "placasDeVideo",
-  "price": 321321,
-  "discount": 32,
-  "category": "ofertas",
-  "description": "CGHVJBKL657890UIYTFU768767675768",
-  "image": "image-1654738515975.png"
- },
- {
   "id": 10,
   "name": "prueba123",
   "section": "almacenamiento",

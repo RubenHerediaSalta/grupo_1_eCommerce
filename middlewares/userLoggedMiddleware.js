@@ -13,6 +13,7 @@ function userLoggedMiddleware(req, res, next) {
 
 	if (req.session.userLogged){
 		res.locals.isLogged = true;
+		res.locals.admin = true;
 		res.locals.user = req.session.userLogged
 	}
 
