@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require("../database/models")
 
 
 const productsController = {
@@ -46,32 +47,32 @@ const productsController = {
         res.render ('./products/productCart')
     },
     index: (req, res) => {
-        res.render("./products/products", {products});
+        db.Product.findAll()
+        .then(function(products){
+            res.render ("./products/products", {products:products})
+        })
     },
     detail: (req, res) => {
 		let producto = products.find(producto => producto.id == req.params.id);
 		res.render("./products/detail", {producto})
 	},
     create: (req, res) =>{
-        res.render ('./products/createProducts')
+        db.Section.findAll()
+        .then(function(sections){
+            res.render ('./products/createProducts', {sections:sections})
+        })
     },
     store: (req, res) =>{
         let image;
         if (req.file != undefined) {
             image = req.file.filename;
         } else {image = "default-image.png"}
-        let newProduct = {
-            id: products[products.length - 1].id + 1,
+        db.Product.create({
             ...req.body,
-            price: Number(req.body.price),
-            discount: Number(req.body.discount),
             image: image
-        };
-        products.push(newProduct);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-        res.redirect("/products");
+        })
+        res.redirect("/products")
     },
-
     delete: (req,res) => {
         let id = req.params.id; 
         let borrarProducto = products.filter(borrar => borrar.id != id);
