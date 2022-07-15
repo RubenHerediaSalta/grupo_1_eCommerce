@@ -51,10 +51,6 @@ const userController = {
 	},
     register: (req,res) => {
         res.render ('./users/register.ejs')
-<<<<<<< HEAD
-    }, 
-    
-=======
     },
     processRegister: (req,res)=>{
         const resultValidation = validationResult(req);
@@ -92,7 +88,6 @@ const userController = {
         User.create(userToCreate)
         return res.render('./users/login.ejs');
     }
->>>>>>> fdccef732b81ad9fb7d0ee8babb1de5ea911e5b5
 }; 
 
 
