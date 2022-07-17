@@ -47,5 +47,24 @@
   "password": "$2a$10$HfNR5kLsXuLhaLoQqx2eM.Z2odfStGDj3BE.UPUdq9mV48azFHob.",
   "admin": false,
   "avatar": "default-image.png"
+ },
+ {
+  "id": 6,
+  "firstName": "Santino",
+  "lastName": "Quinteiro",
+  "email": "santinoqc10@gmail.com",
+  "password": "$2a$10$nV12kXqK6bIxz7yHj97Ql.3D7R6AEKdexsjxmd5OUZmAPcVI9D0eG",
+  "drone": "Acepto",
+  "admin": false,
+  "avatar": "default-image.png"
+ },
+ {
+  "id": 7,
+  "firstName": "Santino",
+  "lastName": "Quinteiro",
+  "email": "fokigamer@gmail.com",
+  "password": "$2a$10$1vSGZc/rpkLFwKeRz4CVZe9Hoe8BW5K0UW3ma11FfWxDM2PUbsU.m",
+  "admin": false,
+  "avatar": "default-image.png"
  }
 ]

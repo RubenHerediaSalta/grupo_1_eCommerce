@@ -21,4 +21,7 @@ router.post('/register', uploadUser.single('avatar'), validations, userControlle
 router.get('/profile', loginMiddleware, userControllers.profile);
 router.get('/logout', userControllers.logout)
 
+//------LISTADO DE USUARIOS-----// (ADMIN)
+
+
 module.exports = router;
