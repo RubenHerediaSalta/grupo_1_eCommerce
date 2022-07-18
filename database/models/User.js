@@ -9,11 +9,11 @@ module.exports = (sequelize, dataTypes) => {
         },
         // created_at: dataTypes.TIMESTAMP,
         // updated_at: dataTypes.TIMESTAMP,
-        first_name: {
+        firstName: {
             type: dataTypes.STRING(500),
             allowNull: false
         },
-        last_name: {
+        lastName: {
             type: dataTypes.STRING(500),
             allowNull: false
         },

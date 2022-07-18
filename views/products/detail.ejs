@@ -9,11 +9,11 @@
 
     <main>
     <div class="detail">
-        <div class="pdimg"><img src="/images/products/<%= producto.image %>" alt=""></div>
+        <div class="pdimg"><img src="/images/products/<%= products.image %>" alt=""></div>
         <div class="pdinfo">
-        <div class="pddes"><p><%= producto.name %></p></div>
-        <div class="pdesp"><p><%= producto.description%></p></div>
-        <div class="pdpre"><p>$<%= producto.price%></p></div>
+        <div class="pddes"><p><%= products.name %></p></div>
+        <div class="pdesp"><p><%= products.description%></p></div>
+        <div class="pdpre"><p>$<%= products.price%></p></div>
         <div class="pdicon">
             <i class="fa-solid fa-shield-halved">GARANTIA 12 MESES</i>
             <i class="fa-solid fa-check">STOCK DISPONIBLE</i>
@@ -57,7 +57,7 @@
         </div>
         <% if (locals.isLogged && locals.admin == true) { %>
         <div class="botoncarrito">
-            <button type="submit" class="boton"><a href="/products/editProducts/<%= producto.id %>">Editar</a></button>
+            <button type="submit" class="boton"><a href="/products/editProducts/<%= products.id %>">Editar</a></button>
         </div>
         <% } %>
     </div>

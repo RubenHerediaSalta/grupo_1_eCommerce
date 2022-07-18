@@ -1,60 +1,48 @@
-const fs = require('fs');
-const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const db = require("../database/models")
-
 
 const productsController = {
 
     editar: (req,res) => {
-        let id = req.params.id
-        let productoEdit = products.find(producto => producto.id == id);
-        res.render ('./products/editProducts', {productoEdit})
-    },
+        let pedidoProducto = db.Product.findByPk(req.params.id)
+        let pedidoSection = db.Section.findAll()
 
-    editarModif: (req,res) => {
-        let id = req.params.id; 
-        let productoEdit = products.find(producto => producto.id == id)
-        let image 
-
-        if (req.files[0] != undefined) {
-            image = req.files[0].filename
-        } else {
-            image = productoEdit.image
-        }
-
-       productoEdit = {
-            id: productoEdit.id,
-            ...req.body,
-            price: Number(req.body.price),
-            discount: Number(req.body.discount),
-            image:image,
-        }
-
-        let newProducts = products.map(producto => {
-            if (producto.id == productoEdit.id) {
-                return producto = {...productoEdit}; 
-            }
-            return producto;
+        Promise.all([pedidoProducto, pedidoSection])
+        .then(function([products, sections]){
+            res.render('./products/editProducts', {products:products, sections:sections})
         })
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-        res.redirect('/products')
-
+    },
+    editarModif: (req, res) =>{
+        let image;
+        if (req.file != undefined) {
+            image = req.file.filename;
+        } else {image = "default-image.png"}
+        db.Product.update({
+            ...req.body,
+            image: image
+        },{
+            where:{
+                id: req.params.id
+            }
+        })
+        res.redirect("/products/allProducts")
     },
     cart: (req,res) => {
         res.render ('./products/productCart')
     },
-    index: (req, res) => {
+    allProducts: (req, res) => {
         db.Product.findAll()
         .then(function(products){
-            res.render ("./products/products", {products:products})
+            res.render ("./products/allProducts", {products:products})
         })
     },
     detail: (req, res) => {
-		let producto = products.find(producto => producto.id == req.params.id);
-		res.render("./products/detail", {producto})
+        db.Product.findByPk(req.params.id,
+            {
+                include : ['sections']
+            })
+        .then(function(products){
+            res.render("./products/detail", {products:products})
+        })
 	},
     create: (req, res) =>{
         db.Section.findAll()
@@ -71,15 +59,66 @@ const productsController = {
             ...req.body,
             image: image
         })
-        res.redirect("/products")
+        res.redirect("/products/allProducts")
     },
     delete: (req,res) => {
-        let id = req.params.id; 
-        let borrarProducto = products.filter(borrar => borrar.id != id);
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(borrarProducto, null, ' '));
-        res.redirect('/products'); 
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect("/products")
+    },
+// -----------------SECCIONES-------------------------//
+    notebooks: (req, res) => {
+        db.Product.findAll({
+            where:{ section: 1}
+    })
+        .then(function(products){
+            res.render ("./products/notebooks", {products:products})
+    })
+    },
+    monitores: (req, res) => {
+        db.Product.findAll({
+            where:{ section: 2}
+    })
+        .then(function(products){
+            res.render ("./products/monitores", {products:products})
+    })
+    },
+    placasdevideo: (req, res) => {
+        db.Product.findAll({
+            where:{ section: 3}
+    })
+        .then(function(products){
+            res.render ("./products/placasdevideo", {products:products})
+    })
     }
+    ,almacenamiento: (req, res) => {
+        db.Product.findAll({
+            where:{ section: 4}
+    })
+        .then(function(products){
+            res.render ("./products/almacenamiento", {products:products})
+    })
+    },
+    perifericos: (req, res) => {
+        db.Product.findAll({
+            where:{ section: 5}
+    })
+        .then(function(products){
+            res.render ("./products/perifericos", {products:products})
+    })
+    },
+    ofertas: (req, res) => {
+        db.Product.findAll({
+            where:{ section: 6}
+    })
+        .then(function(products){
+            res.render ("./products/ofertas", {products:products})
+    })
+    }
+//-------------------------------------------------------//
 }
 
                              

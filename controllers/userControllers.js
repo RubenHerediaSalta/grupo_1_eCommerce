@@ -3,6 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 const User = require('../models/User')
+const db = require("../database/models")
+
 
 const userController = {
     login: (req,res) => {
@@ -22,15 +24,7 @@ const userController = {
 
                 return res.redirect('./profile')
             }
-            return res.render('./users/login.ejs', {
-                errors: {
-                    email: {
-                        msg: 'CREDENCIALES INVALIDAS'
-                    }
-                }
-            });
         }
-
        return res.render('./users/login.ejs', {
         errors: {
             email: {
@@ -62,7 +56,8 @@ const userController = {
             });
         }
 
-        let userInDB = User.findByField('email', req.body.email)
+        //let userInDB = User.findByField('email', req.body.email)
+        /*let userInDB = db.User.findAll({where:{ email: req.body.email}});
         if(userInDB){
             return res.render('./users/register.ejs', {
                 errors: {
@@ -72,20 +67,18 @@ const userController = {
                 },
                 oldData: req.body
             })
-        }
+        }*/
 
         let avatar;
         if (req.file != undefined) {
             avatar = req.file.filename;
         } else {avatar = "default-image.png"}
-        let userToCreate = {
+        db.User.create({
             ...req.body,
             admin: false,
             password: bcryptjs.hashSync(req.body.password, 10),
             avatar: avatar
-        }
-
-        User.create(userToCreate)
+        })
         return res.render('./users/login.ejs');
     }
 }; 
