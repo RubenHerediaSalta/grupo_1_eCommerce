@@ -11,7 +11,7 @@ const uploadProduct = require('../middlewares/multerMiddlewareProducts');
 router.get('/', productsControllers.index);
 
 //---------DETALLE DE PRODUCTOS-------//
-router.get('/detail/:id/', productsControllers.detail);  
+router.get('/detail/:id/',uploadProduct.single('image'), productsControllers.detail);  
 
 //---------CREAR PRODUCTOS-------//
 router.get('/createProducts', productsControllers.create);
@@ -19,11 +19,11 @@ router.post('/', uploadProduct.single('image'), productsControllers.store)
 
 //---------EDITAR PRODUCTOS-------//
 router.get('/editProducts/:id/', productsControllers.editar);
-router.put('/editProducts/:id/', uploadProduct.any(),productsControllers.editarModif); 
+router.put('/editProducts/:id/', uploadProduct.single('image'),productsControllers.editarModif); 
 
 
 //----------BORRAR PRODUCTOS-----------//
-router.delete('/editProducts/:id/', productsControllers.delete); 
+router.delete('/delete/:id/', productsControllers.delete); 
 
  //---------CARRITO DE PRODUCTOS-------//
 router.get('/productCart', productsControllers.cart); 

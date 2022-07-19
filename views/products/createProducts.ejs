@@ -7,7 +7,7 @@
      <!-- Header -->
      <%- include('./../partials/header') %>
     
-    <main class="register-main">
+     <main class="register-main">
 
         <form action="/products" method="POST" enctype="multipart/form-data">
 
@@ -15,16 +15,16 @@
             <h4>AGREGAR PRODUCTO</h4>
             <input class="controls" type="text" name="name" id="name" placeholder="Nombre del Producto">
             <div class="controls"><label for="section">Seccion :</label>
-                <select name="section" id="section" style="font-family: 'Audiowide';">
-                    <option value="notebooks">NOTEBOOKS</option>
-                    <option value="monitores">MONITORES</option>
-                    <option value="placasDeVideo">PLACAS DE VIDEO</option>
-                    <option value="almacenamiento">ALMACENAMIENTO</option>
-                    <option value="perifericos">PERIFERICOS</option>
+                <select name="section" id="section" style="font-family: 'Audiowide'; text-transform: uppercase;">
+                    <% for (let i = 0; i < sections.length; i++) { %>
+                        <option value="<%=sections[i].id%>">
+                            <%= sections[i].name%>
+                        </option>
+                        <% } %>
                 </select></div>
             <input class="controls" type="number" name="price" id="price" placeholder="Precio del Producto">
             <input class="controls" type="number" name="discount" id="discount" placeholder="Descuento del Producto">
-            <p class="controls"> Producto en Oferta  <input type="checkbox" id="category" name="category" value="ofertas"></p>
+           <!-- <p class="controls"> Producto en Oferta  <input type="checkbox" id="category" name="category" value="ofertas"></p>-->
             <div class="controls"><label for="description">Descripción del Producto:</label>
             <textarea style="width: 100% ; height: 80px;" name="description" id="description">Introducir la descripción...</textarea></div>
             <input class="controls" type="file" name="image" id="image" accept=".jpg,.png" multiple placeholder="Seleccionar Imagen">

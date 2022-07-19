@@ -9,28 +9,34 @@
     
     <main class="register-main">
 
-        <form action="/products/editProducts/<%= productoEdit.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/products/editProducts/<%= products.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
 
         <section class="register-custom">
-            <h4>EDITAR <%= productoEdit.name %></h4>
-            <input class="controls" type="text" name="name" id="name" placeholder="Nombre del Producto" value = "<%= productoEdit.name %>" >
+            <h4>EDITAR <%= products.name %></h4>
+            <input class="controls" type="text" name="name" id="name" placeholder="Nombre del Producto" value = "<%= products.name %>" >
             <div class="controls"><label for="section">Seccion :</label>
-                <select name="section" id="section" style="font-family: 'Audiowide';">
-                    <option value="notebooks">NOTEBOOKS</option>
-                    <option value="monitores">MONITORES</option>
-                    <option value="placasDeVideo">PLACAS DE VIDEO</option>
-                    <option value="almacenamiento">ALMACENAMIENTO</option>
-                    <option value="perifericos">PERIFERICOS</option>
+                <select name="section" id="section" style="font-family: 'Audiowide'; text-transform: uppercase;">
+                    <% for (let i = 0; i < sections.length; i++) { %>
+                        <% if (sections[i].id == products.section){ %> 
+                            <option value="<%=sections[i].id%>" selected>
+                                <%= sections[i].name%>
+                            </option>
+                            <% } else {%>
+                                <option value="<%=sections[i].id%>">
+                                    <%= sections[i].name%>
+                                </option>
+                            <% } %>  
+                        <% } %>
                 </select></div>
-            <input class="controls" type="number" name="price" id="price" placeholder="Precio del Producto" value="<%= productoEdit.price %>">
-            <input class="controls" type="number" name="discount" id="discount" placeholder="Descuento del Producto" value="<%= productoEdit.discount %>">
-            <p class="controls"> Producto en Oferta  <input type="checkbox" id="category" name="category" value="ofertas"></p>
+            <input class="controls" type="number" name="price" id="price" placeholder="Precio del Producto" value="<%= products.price %>">
+            <input class="controls" type="number" name="discount" id="discount" placeholder="Descuento del Producto" value="<%= products.discount %>">
+           <!-- <p class="controls"> Producto en Oferta  <input type="checkbox" id="category" name="category" value="ofertas"></p>-->
             <div class="controls"><label for="description">Descripción del Producto:</label>
-            <textarea style="width: 100% ; height: 80px;" name="description" id="description"><%= productoEdit.description %></textarea></div>
+            <textarea style="width: 100% ; height: 80px;" name="description" id="description"><%= products.description %></textarea></div>
             <input class="controls" type="file" name="image" id="image" accept=".jpg,.png" multiple placeholder="Seleccionar Imagen">
             <input class="boton" type="submit" value="Editar">
               </form>
-              <form method="POST" action="/products/editProducts/<%= productoEdit.id %>/?_method=DELETE">
+              <form method="POST" action="/products/delete/<%= products.id %>/?_method=DELETE">
                 <input class="boton" type="submit" value="Borrar"> 
               </form>
             </section>

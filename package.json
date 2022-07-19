@@ -4,7 +4,7 @@
   "description": "Portal dedicado a la venta de artículos e insumos de computación con gran variedad, principalmente dedicada al público gamer y entusiasta. Ofrecemos atención personalizada tratando de cumplir siempre con las expectativas del cliente. El mejor precio del mercado y la mejor financiación.",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon"
+    "test": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,6 @@
     "multer": "^1.4.4",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.19",
-    "sequelize": "^6.21.2"
+    "sequelize": "^6.21.3"
   }
 }

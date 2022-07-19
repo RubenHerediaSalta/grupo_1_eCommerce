@@ -36,7 +36,7 @@
   "email": "admin@custom.com",
   "password": "$2a$10$j.w.j0qCmSADDDwMIy04iuxI7fyDCzF1zRFScKmbh4ewryyvOVgDC",
   "drone": "Acepto",
-  "admin": false,
+  "admin": true,
   "avatar": "avatar-1655859517620.png"
  },
  {
