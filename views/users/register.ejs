@@ -14,11 +14,11 @@
                 <h4>REGISTRARSE</h4>
                 <% if (locals.errors && errors.firstName) { %> <%= errors.firstName.msg %><% } %>
                 <input class="controls <%= locals.errors && errors.firstName ? 'errorform' : null %>" type="text" name="firstName" id="firstName" placeholder="Ingrese su nombre" value="<%= locals.oldData ? oldData.firstName : null %>">
-    
+                <% if (locals.errors && errors.lastName) { %> <%= errors.lastName.msg %><% } %>
                 <input class="controls <%= locals.errors && errors.lastName ? 'errorform' : null %>" type="text" name="lastName" id="lastName" placeholder="Ingrese su apellido" value="<%= locals.oldData ? oldData.lastName : null %>">
                 <% if (locals.errors && errors.email) { %> <%= errors.email.msg %><% } %>
                 <input class="controls <%= locals.errors && errors.email ? 'errorform' : null %>" type="email" name="email" id="email" placeholder="Ingrese su correo" value="<%= locals.oldData ? oldData.email : null %>">
-               
+                <% if (locals.errors && errors.password) { %> <%= errors.password.msg %><% } %>
                 <input class="controls <%= locals.errors && errors.password ? 'errorform' : null %>" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
               
                 <div class="controls"><label for="avatar">Imagen de perfil:</label>
