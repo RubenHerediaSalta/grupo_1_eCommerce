@@ -1,5 +1,6 @@
 const fs = require('fs');
-const db = require("../database/models")
+let db = require('../database/models/User')
+
 const User = {
     fileName: './data/users.json',
     getData: function() {

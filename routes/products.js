@@ -11,7 +11,7 @@ const uploadProduct = require('../middlewares/multerMiddlewareProducts');
 router.get('/allProducts', productsControllers.allProducts);
 
 //---------DETALLE DE PRODUCTOS-------//
-router.get('/detail/:id/', productsControllers.detail);  
+router.get('/detail/:id/',uploadProduct.single('image'), productsControllers.detail);  
 
 //---------CREAR PRODUCTOS-------//
 router.get('/createProducts', productsControllers.create);

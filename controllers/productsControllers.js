@@ -70,6 +70,7 @@ const productsController = {
         res.redirect("/products")
     },
 // -----------------SECCIONES-------------------------//
+
     notebooks: (req, res) => {
         db.Product.findAll({
             where:{ section: 1}

@@ -7,14 +7,17 @@ const db = require("../database/models")
 
 
 const userController = {
+   
     login: (req,res) => {
         res.render ('./users/login.ejs')
     },
-    loginProcess: (req, res) => {
-        let userToLogin = User.findByField('email', req.body.email);
+    loginProcess: async(req, res) => {
+            let userToLogin = await db.User.findOne({
+                  where: {email: req.body.email},
+            });
         if(userToLogin){
             let passwordOK = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if(passwordOK){
+            if(passwordOK){ 
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
 
@@ -23,19 +26,28 @@ const userController = {
                 }
 
                 return res.redirect('./profile')
+
+            }else{
+                return res.render('./users/login.ejs', {
+                    errors: {
+                        email: {
+                            msg: 'CREDENCIALES INVALIDAS'
+                        }
+                    }
+                })
             }
-        }
+        }else{
        return res.render('./users/login.ejs', {
         errors: {
             email: {
                 msg: 'CREDENCIALES INVALIDAS'
             }
         }
-    });
+    })};
     },
     profile: (req, res) => {
         return res.render('./users/profile', {
-			user: req.session.userLogged
+			user:req.session.userLogged,
 		});
 	},
     logout: (req, res) => {
@@ -46,7 +58,7 @@ const userController = {
     register: (req,res) => {
         res.render ('./users/register.ejs')
     },
-    processRegister: (req,res)=>{
+    processRegister: async (req,res)=>{
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
@@ -56,8 +68,8 @@ const userController = {
             });
         }
 
-        //let userInDB = User.findByField('email', req.body.email)
-        /*let userInDB = db.User.findAll({where:{ email: req.body.email}});
+        let userInDB = await db.User.findOne({where: {email: req.body.email}})
+        
         if(userInDB){
             return res.render('./users/register.ejs', {
                 errors: {
@@ -67,7 +79,7 @@ const userController = {
                 },
                 oldData: req.body
             })
-        }*/
+        }
 
         let avatar;
         if (req.file != undefined) {
@@ -81,6 +93,7 @@ const userController = {
         })
         return res.render('./users/login.ejs');
     }
+
 }; 
 
 
