@@ -20,3 +20,9 @@ Mi compañero Ruben supo adaptarse mejor, de todas formas pudimos tener feedback
 ----Retro 5to Sprint-----
 
 Sin dudas es un sprint clave de la cursada, destacamos mucho los dos videos de register/login. Ese contenido nos supo salvar la vida, ya que explican el paso a paso de cada metodo y ayuda a quedar todo mucho más claro.
+
+
+
+----Retro 6to Sprint-----
+
+Por lo general siempre tenemos el sprint preparado para el dia de la fecha, en este caso estuvimos muy sobre el dia de entrega, pasar la informacion de JSON a base de datos fue algo complicado, pero supimos como resolverlo, también destacamos la ayuda de compañeros de otros grupos, al ser solo dos personas en este punto de la cursada no nos vino mal juntarnos a charlar. 
