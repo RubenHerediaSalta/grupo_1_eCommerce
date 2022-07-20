@@ -12,7 +12,7 @@
 
             <section class="register-custom">
                 <h4>REGISTRARSE</h4>
-        
+                <% if (locals.errors && errors.firstName) { %> <%= errors.firstName.msg %><% } %>
                 <input class="controls <%= locals.errors && errors.firstName ? 'errorform' : null %>" type="text" name="firstName" id="firstName" placeholder="Ingrese su nombre" value="<%= locals.oldData ? oldData.firstName : null %>">
     
                 <input class="controls <%= locals.errors && errors.lastName ? 'errorform' : null %>" type="text" name="lastName" id="lastName" placeholder="Ingrese su apellido" value="<%= locals.oldData ? oldData.lastName : null %>">
