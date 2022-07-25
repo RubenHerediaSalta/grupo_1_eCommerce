@@ -1,4 +1,5 @@
 const db = require("../database/models")
+const { validationResult } = require('express-validator');
 
 const productsController = {
 
@@ -12,20 +13,40 @@ const productsController = {
         })
     },
     editarModif: (req, res) =>{
+        const validacionesEdit = validationResult(req)
         let image;
         if (req.file != undefined) {
             image = req.file.filename;
         } else {image = "default-image.png"}
-        db.Product.update({
-            ...req.body,
-            image: image
-        },{
-            where:{
-                id: req.params.id
-            }
+        
+        if (validacionesEdit.errors.length > 0) {
+
+        let pedidoProducto = db.Product.findByPk(req.params.id)
+        let pedidoSection = db.Section.findAll()
+
+        Promise.all([pedidoProducto, pedidoSection])
+        .then(function([products, sections]){
+            res.render('./products/editProducts', {products:products, sections:sections, errors: validacionesEdit.mapped()})
         })
-        res.redirect("/products/allProducts")
+
+        } else {
+            db.Product.update({
+                ...req.body,
+                image: image
+            },{
+                where:{
+                    id: req.params.id
+                }
+            })
+            res.redirect("/products/allProducts")
+
+        }
+
+
+       
     },
+
+    
     cart: (req,res) => {
         res.render ('./products/productCart')
     },
@@ -51,15 +72,32 @@ const productsController = {
         })
     },
     store: (req, res) =>{
-        let image;
+        const validaciones = validationResult(req)
+            let image;
         if (req.file != undefined) {
             image = req.file.filename;
         } else {image = "default-image.png"}
-        db.Product.create({
-            ...req.body,
-            image: image
-        })
-        res.redirect("/products/allProducts")
+
+        if (validaciones.errors.length > 0) {
+
+            db.Section.findAll()
+            .then(function(sections){
+                res.render ('./products/createProducts', {
+                    sections: sections,
+                    errors: validaciones.mapped(),
+                    oldData: req.body
+                })
+            })
+                  
+       } else {
+            db.Product.create({
+                ...req.body,
+                image: image
+            })
+            res.redirect('/products/allProducts')
+        }
+        
+        
     },
     delete: (req,res) => {
         db.Product.destroy({

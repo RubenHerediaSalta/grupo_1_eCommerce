@@ -2,7 +2,9 @@ const express = require ('express');
 const router = express.Router(); 
 const path = require('path');
 const multer = require('multer');  
+const { body } = require('express-validator');
 const productsControllers = require('../controllers/productsControllers.js'); 
+const validationProducts = require('../middlewares/validateProductsMiddleware'); 
 
 //---------MULTER-------//
 const uploadProduct = require('../middlewares/multerMiddlewareProducts');
@@ -15,11 +17,11 @@ router.get('/detail/:id/',uploadProduct.single('image'), productsControllers.det
 
 //---------CREAR PRODUCTOS-------//
 router.get('/createProducts', productsControllers.create);
-router.post('/', uploadProduct.single('image'), productsControllers.store)
+router.post('/', uploadProduct.single('image'), validationProducts, productsControllers.store)
 
 //---------EDITAR PRODUCTOS-------//
 router.get('/editProducts/:id/', productsControllers.editar);
-router.put('/editProducts/:id/', uploadProduct.single('image'),productsControllers.editarModif); 
+router.put('/editProducts/:id/', uploadProduct.single('image'),validationProducts, productsControllers.editarModif); 
 
 //----------BORRAR PRODUCTOS-----------//
 router.delete('/delete/:id/', productsControllers.delete); 
