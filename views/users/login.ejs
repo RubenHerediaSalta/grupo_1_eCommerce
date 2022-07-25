@@ -9,17 +9,18 @@
     
     <main class="register-main">
 
-        <form action="/users/login" method="POST">
+        <form action="/users/login" method="POST" class="formLogin">
 
         <section class="register-custom">
             <h4>INICIO DE SESION</h4>
 
             <% if (locals.errors && errors.email) { %> <%= errors.email.msg %><% } %>
-            <input class="controls <%= locals.errors && errors.email ? 'errorform' : null %>" type="email" name="email" placeholder="Ingrese su correo">
+            <input class="controls <%= locals.errors && errors.email ? 'errorform' : null %> emailfield" type="email" name="email" placeholder="Ingrese su correo">
             
-            <input class="controls <%= locals.errors && errors.email ? 'errorform' : null %>" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+            <input class="controls <%= locals.errors && errors.email ? 'errorform' : null %> passfield" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
             
             <p class="recordar-pw"> Recordar usuario  <input type="checkbox" id="huey" name="drone" value="Acepto"></p>
+            <ul class="erroresLogin" style="list-style-type:none;"></ul>
             <input class="boton" type="submit" value="Ingresar">
             <p class="no-tenes-acc"><a href="/users/register">¿No tenés cuenta? Registrate ahora mismo.</a></p>
         </section>
@@ -29,6 +30,6 @@
 
      <!-- Footer -->
      <%- include('./../partials/footer') %>
-     
+     <script src="/js/loginScript.js"></script>
 </body>
 </html>

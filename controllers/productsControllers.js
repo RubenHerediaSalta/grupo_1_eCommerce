@@ -67,7 +67,7 @@ const productsController = {
                 id: req.params.id
             }
         })
-        res.redirect("/products")
+        res.redirect("/products/allProducts")
     },
 // -----------------SECCIONES-------------------------//
 
