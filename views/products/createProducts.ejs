@@ -13,8 +13,10 @@
 
         <section class="register-custom">
             <h4>AGREGAR PRODUCTO</h4>
+            <% if (locals.errors && errors.name) { %> <%= errors.name.msg %><% } %>
             <input class="controls namefield" type="text" name="name" id="name" placeholder="Nombre del Producto">
             <div class="controls sectionfield"><label for="section">Seccion :</label>
+                <% if (locals.errors && errors.section) { %> <%= errors.section.msg %><% } %>
                 <select name="section" id="section" style="font-family: 'Audiowide'; text-transform: uppercase;">
                     <% for (let i = 0; i < sections.length; i++) { %>
                         <option value="<%=sections[i].id%>">
@@ -22,7 +24,9 @@
                         </option>
                         <% } %>
                 </select></div>
+                <% if (locals.errors && errors.price) { %> <%= errors.price.msg %><% } %>
             <input class="controls pricefield" type="number" name="price" id="price" placeholder="Precio del Producto">
+            <% if (locals.errors && errors.discount) { %> <%= errors.discount.msg %><% } %>
             <input class="controls discountfield" type="number" name="discount" id="discount" placeholder="Descuento del Producto">
            <!-- <p class="controls"> Producto en Oferta  <input type="checkbox" id="category" name="category" value="ofertas"></p>-->
             <div class="controls"><label for="description">Descripción del Producto:</label>
@@ -37,6 +41,6 @@
 
      <!-- Footer -->
      <%- include('./../partials/footer') %>
-     <script src="/js/createScript.js"></script>
+     <script src="/js/productScript.js"></script>
 </body>
 </html>
