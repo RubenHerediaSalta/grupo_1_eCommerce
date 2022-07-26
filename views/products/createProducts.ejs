@@ -9,28 +9,29 @@
     
      <main class="register-main">
 
-        <form action="/products" method="POST" enctype="multipart/form-data" class="formCreate">
+        <form action="/products/createProducts" method="POST" enctype="multipart/form-data" class="formCreate">
 
         <section class="register-custom">
             <h4>AGREGAR PRODUCTO</h4>
             <% if (locals.errors && errors.name) { %> <%= errors.name.msg %><% } %>
-            <input class="controls namefield" type="text" name="name" id="name" placeholder="Nombre del Producto">
-            <div class="controls sectionfield"><label for="section">Seccion :</label>
+            <input class="controls <%= locals.errors && errors.name ? 'errorform' : null %> namefield" type="text" name="name" id="name" placeholder="Nombre del Producto" value="<%= locals.oldData ? oldData.name : null %>"">
+            <div class="controls <%= locals.errors && errors.section ? 'errorform' : null %> sectionfield"><label for="section">Seccion :</label>
                 <% if (locals.errors && errors.section) { %> <%= errors.section.msg %><% } %>
                 <select name="section" id="section" style="font-family: 'Audiowide'; text-transform: uppercase;">
                     <% for (let i = 0; i < sections.length; i++) { %>
-                        <option value="<%=sections[i].id%>">
+                        <option value="<%=sections[i].id%>" >
                             <%= sections[i].name%>
                         </option>
                         <% } %>
                 </select></div>
                 <% if (locals.errors && errors.price) { %> <%= errors.price.msg %><% } %>
-            <input class="controls pricefield" type="number" name="price" id="price" placeholder="Precio del Producto">
+            <input class="controls <%= locals.errors && errors.price ? 'errorform' : null %> pricefield" type="number" name="price" id="price" placeholder="Precio del Producto" value="<%= locals.oldData ? oldData.price : null %>">
             <% if (locals.errors && errors.discount) { %> <%= errors.discount.msg %><% } %>
-            <input class="controls discountfield" type="number" name="discount" id="discount" placeholder="Descuento del Producto">
+            <input class="controls <%= locals.errors && errors.discount ? 'errorform' : null %> discountfield" type="number" name="discount" id="discount" placeholder="Descuento del Producto" value="<%= locals.oldData ? oldData.discount : null %>">
            <!-- <p class="controls"> Producto en Oferta  <input type="checkbox" id="category" name="category" value="ofertas"></p>-->
-            <div class="controls"><label for="description">Descripción del Producto:</label>
-            <textarea style="width: 100% ; height: 80px;" name="description" id="description" class="descriptionfield"></textarea></div>
+           <% if (locals.errors && errors.description) { %> <%= errors.description.msg %><% } %>
+            <div class="controls" <%= locals.errors && errors.description ? 'errorform' : null %>><label for="description">Descripción del Producto:</label>
+            <textarea style="width: 100% ; height: 80px;" name="description" id="description" class="descriptionfield"><%= locals.oldData ? oldData.description : null %></textarea></div>
             <input class="controls" type="file" name="image" id="image" accept=".jpg,.png" multiple placeholder="Seleccionar Imagen">
             <ul class="erroresCreate" style="list-style-type:none;"></ul>
             <input class="boton" type="submit" value="Agregar">

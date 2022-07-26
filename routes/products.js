@@ -17,7 +17,7 @@ router.get('/detail/:id/',uploadProduct.single('image'), productsControllers.det
 
 //---------CREAR PRODUCTOS-------//
 router.get('/createProducts', productsControllers.create);
-router.post('/', uploadProduct.single('image'), validationProducts, productsControllers.store)
+router.post('/createProducts', uploadProduct.single('image'), validationProducts, productsControllers.store)
 
 //---------EDITAR PRODUCTOS-------//
 router.get('/editProducts/:id/', productsControllers.editar);
