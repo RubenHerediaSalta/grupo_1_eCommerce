@@ -34,7 +34,9 @@ window.addEventListener("load", function(){
                     erroresEdit.innerHTML += "<li>" + erroresE[i] + "</li>"
                     erroresEdit.classList.add("alert-warning")
                 }
-            }else{alert("Producto editado correctamente!")
+            }else{
+                erroresEdit.innerHTML= ""
+                erroresEdit.classList.remove("alert-warning")
             } 
     }
     )
@@ -71,6 +73,8 @@ window.addEventListener("load", function(){
                     erroresEdit.classList.add("alert-warning")
                 }
             }else{
+                erroresEdit.innerHTML= ""
+                erroresEdit.classList.remove("alert-warning")
             } 
     }
     )

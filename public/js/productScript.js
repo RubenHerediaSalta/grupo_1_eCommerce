@@ -34,7 +34,9 @@ window.addEventListener("load", function(){
                     erroresCreate.innerHTML += "<li>" + erroresC[i] + "</li>"
                     erroresCreate.classList.add("alert-warning")
                 }
-            }else{alert("Producto agregado correctamente!")
+            }else{
+                erroresCreate.innerHTML= ""
+                erroresCreate.classList.remove("alert-warning")
             } 
     }
     )
@@ -71,6 +73,8 @@ window.addEventListener("load", function(){
                     erroresCreate.classList.add("alert-warning")
                 }
             }else{
+                erroresCreate.innerHTML= ""
+                erroresCreate.classList.remove("alert-warning")
             } 
     }
     )

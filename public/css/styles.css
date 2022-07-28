@@ -536,10 +536,7 @@ a:hover{
   .is-invalid {
     color: #842029;
   }
-  .errorHide{
-    display: none;
-  }
-  .alert-warning{
+    .alert-warning{
     display: block;
     font-family: sans-serif;
     color:red;

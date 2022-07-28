@@ -40,7 +40,9 @@ window.addEventListener("load", function(){
                     erroresRegister.innerHTML += "<li>" + erroresR[i] + "</li>"
                     erroresRegister.classList.add("alert-warning")
                 }
-            }else{alert("Cuenta creada exitosamente!")
+            }else{
+                erroresRegister.innerHTML= ""
+                erroresRegister.classList.remove("alert-warning")
             } 
     }
     )
@@ -82,7 +84,8 @@ window.addEventListener("load", function(){
                     erroresRegister.classList.add("alert-warning")
                 }
             }else{
-                erroresRegister.classList.add("errorHide")
+                erroresRegister.innerHTML= ""
+                erroresRegister.classList.remove("alert-warning")
             }
     }
     )
