@@ -27,7 +27,7 @@ window.addEventListener("load", function(){
         let passfield = document.querySelector(".passfield")
         if (passfield.value == "" && passfield.value.length < 8) {
             erroresR.push("Ingrese una contraseña (minimo 8 caracteres)")
-        }else{
+        }else{ 
         }
 
         if (erroresR.length > 0){
