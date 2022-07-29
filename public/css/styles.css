@@ -448,7 +448,7 @@ a:hover{
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 16px;
-    border: 2px solid orange;
+    border: 3px solid black;
     font-family:'Audiowide', sans-serif;
     font-size: 18px;
 }
@@ -536,10 +536,7 @@ a:hover{
   .is-invalid {
     color: #842029;
   }
-  .errorHide{
-    display: none;
-  }
-  .alert-warning{
+    .alert-warning{
     display: block;
     font-family: sans-serif;
     color:red;

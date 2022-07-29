@@ -26,7 +26,12 @@ const productsController = {
 
         Promise.all([pedidoProducto, pedidoSection])
         .then(function([products, sections]){
-            res.render('./products/editProducts', {products:products, sections:sections, errors: validacionesEdit.mapped()})
+            res.render('./products/editProducts', {
+                products:products, 
+                sections:sections, 
+                errors: validacionesEdit.mapped(),
+                oldData: req.body
+            })
         })
 
         } else {
@@ -71,7 +76,7 @@ const productsController = {
             res.render ('./products/createProducts', {sections:sections})
         })
     },
-    store: (req, res) =>{
+    store: async(req, res) =>{
         const validaciones = validationResult(req)
             let image;
         if (req.file != undefined) {
@@ -82,7 +87,7 @@ const productsController = {
 
             db.Section.findAll()
             .then(function(sections){
-                res.render ('./products/createProducts', {
+                res.render('./products/createProducts',{
                     sections: sections,
                     errors: validaciones.mapped(),
                     oldData: req.body

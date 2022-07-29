@@ -28,6 +28,8 @@ window.addEventListener("load", function(){
                     erroresLogin.classList.add("alert-warning")
                 }
             }else{
+                erroresLogin.innerHTML= ""
+                erroresLogin.classList.remove("alert-warning")
             } 
     }
     )
@@ -58,7 +60,8 @@ window.addEventListener("load", function(){
                     erroresLogin.classList.add("alert-warning")
                 }
             }else{
-                erroresLogin.classList.add("errorHide")
+                erroresLogin.innerHTML= ""
+                erroresLogin.classList.remove("alert-warning")
             }
     }
     )
