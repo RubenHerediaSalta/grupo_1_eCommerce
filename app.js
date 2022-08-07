@@ -24,12 +24,22 @@ const rutaUser = require('./routes/users.js');
 const rutaMain = require('./routes/main.js');
 const rutaProducts = require('./routes/products.js');
 
+/* ------------RUTAS API------------- */
+
+const apiUserRoute = require('./routes/api/users'); 
+const apiProductsRoute = require('./routes/api/products'); 
 
 app.listen(2022 ,()=>{
     console.log('Custom on')
 });
 
 /*---------------APP USE----------------*/
+
 app.use('/', rutaMain);
 app.use('/users', rutaUser);
 app.use('/products', rutaProducts);
+
+/*---------------- APP USE API ----------------*/
+
+app.use('/api/users', apiUserRoute); 
+app.use('/api/products', apiProductsRoute); 
