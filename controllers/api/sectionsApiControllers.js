@@ -4,34 +4,32 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const moment = require('moment');
 
-// const Products = db.Product; 
-
-const productsApiController = {
+const sectionsApiController = {
     'list': (req,res) => {
-        db.Product.findAll()
-        .then(products => {
+        db.Section.findAll()
+        .then(sections => {
             let respuesta = {
                 meta: {
                     status: 200, 
-                    total: products.length, 
-                    url: 'api/products'
+                    total: sections.length, 
+                    url: 'api/sections'
                 },
-                data: products 
+                data: sections 
             }
             res.json(respuesta); 
         })
     },
     'detail': (req, res) => {
-        db.Product.findByPk(req.params.id) 
+        db.Section.findByPk(req.params.id) 
 
-        .then(product => {
+        .then(section => {
             let respuesta = {
                 meta: {
                     status: 200, 
-                    total: product.lenght,
-                    url: 'api/products/:id'
+                    total: section.lenght,
+                    url: 'api/sections/:id'
                 },
-                data: product
+                data: section
             }
             res.json(respuesta); 
         })
@@ -39,4 +37,4 @@ const productsApiController = {
 
 }
 
-module.exports = productsApiController; 
+module.exports = sectionsApiController; 

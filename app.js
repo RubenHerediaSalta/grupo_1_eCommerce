@@ -28,6 +28,7 @@ const rutaProducts = require('./routes/products.js');
 
 const apiUserRoute = require('./routes/api/users'); 
 const apiProductsRoute = require('./routes/api/products'); 
+const apiSectionsRoute = require('./routes/api/sections'); 
 
 app.listen(2022 ,()=>{
     console.log('Custom on')
@@ -43,3 +44,4 @@ app.use('/products', rutaProducts);
 
 app.use('/api/users', apiUserRoute); 
 app.use('/api/products', apiProductsRoute); 
+app.use('/api/sections', apiSectionsRoute); 
