@@ -61,7 +61,7 @@ window.addEventListener("load", function(){
             erroresC.push("Complete la descripcion (minimo 20 caracteres)")
         }else {
         }
-
+        let erroresCreate = document.querySelector(".erroresCreate")
         if (erroresC.length > 0){
             e.preventDefault();
                 
