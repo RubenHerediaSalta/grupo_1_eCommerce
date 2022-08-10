@@ -25,3 +25,4 @@ https://trello.com/b/FEWkaXaQ/custom-web
 
 // LINK A DIAGRAMA DE BASE DE DATOS // 
 https://drive.google.com/file/d/1eqUHncfQpKZQyc2MYTBKbGahce5KJWSC/view?usp=sharing
+

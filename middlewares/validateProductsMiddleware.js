@@ -8,7 +8,7 @@ const validateProducts = [
         .notEmpty().withMessage('Debes seleccionar una sección'),
     body('price')
         .notEmpty().withMessage('Ingrese un valor')
-        .isInt({min: 100, max: 9999999999}),
+        .isNumeric({min: 100, max: 9999999999}),
     body('discount')
         .isInt({min: 1, max: 99}).withMessage('Seleccione un valor entre 1 y 99'), 
     body('description')

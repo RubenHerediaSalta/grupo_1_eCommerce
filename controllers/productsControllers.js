@@ -44,14 +44,8 @@ const productsController = {
                 }
             })
             res.redirect("/products/allProducts")
-
         }
-
-
-       
     },
-
-    
     cart: (req,res) => {
         res.render ('./products/productCart')
     },
@@ -92,8 +86,7 @@ const productsController = {
                     errors: validaciones.mapped(),
                     oldData: req.body
                 })
-            })
-                  
+            })     
        } else {
             db.Product.create({
                 ...req.body,
@@ -101,8 +94,6 @@ const productsController = {
             })
             res.redirect('/products/allProducts')
         }
-        
-        
     },
     delete: (req,res) => {
         db.Product.destroy({

@@ -5,6 +5,7 @@ const multer = require('multer');
 const { body } = require('express-validator');
 const productsControllers = require('../controllers/productsControllers.js'); 
 const validationProducts = require('../middlewares/validateProductsMiddleware'); 
+const productsMiddleware = require('../middlewares/productsMiddleware.js')
 
 //---------MULTER-------//
 const uploadProduct = require('../middlewares/multerMiddlewareProducts');
@@ -16,15 +17,15 @@ router.get('/allProducts', productsControllers.allProducts);
 router.get('/detail/:id/',uploadProduct.single('image'), productsControllers.detail);  
 
 //---------CREAR PRODUCTOS-------//
-router.get('/createProducts', productsControllers.create);
+router.get('/createProducts', productsMiddleware, productsControllers.create);
 router.post('/createProducts', uploadProduct.single('image'), validationProducts, productsControllers.store)
 
 //---------EDITAR PRODUCTOS-------//
-router.get('/editProducts/:id/', productsControllers.editar);
+router.get('/editProducts/:id/', productsMiddleware, productsControllers.editar);
 router.put('/editProducts/:id/', uploadProduct.single('image'),validationProducts, productsControllers.editarModif); 
 
 //----------BORRAR PRODUCTOS-----------//
-router.delete('/delete/:id/', productsControllers.delete); 
+router.delete('/delete/:id/', productsMiddleware, productsControllers.delete); 
 
  //---------CARRITO DE PRODUCTOS-------//
 router.get('/productCart', productsControllers.cart); 
