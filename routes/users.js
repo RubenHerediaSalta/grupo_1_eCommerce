@@ -18,8 +18,16 @@ router.get('/register', guestMiddleware, userControllers.register);
 router.post('/register', uploadUser.single('avatar'), validations, userControllers.processRegister)
 
 //---------PERFIL DE USUARIO-------//
-router.get('/profile', loginMiddleware, userControllers.profile);
+router.get('/profile/', loginMiddleware, userControllers.profile);
+//router.get('/profile/:id/', loginMiddleware, userControllers.profile);
 router.get('/logout', userControllers.logout)
+
+//---------EDITAR USUARIO-------//
+router.get('/editUser/:id/', userControllers.editar);
+router.put('/editUser/:id/', uploadUser.single('avatar'), userControllers.editarModif); 
+
+//---------BORRAR USUARIO-------//
+router.delete('/delete/:id/', userControllers.delete); 
 
 //------LISTADO DE USUARIOS-----// (ADMIN)
 

@@ -45,10 +45,11 @@ const userController = {
         }
     })};
     },
-    profile: (req, res) => {
-        return res.render('./users/profile', {
-			user:req.session.userLogged,
-		});
+    profile: (req, res) =>{
+        db.User.findByPk(req.params.id)
+        .then(function(users){
+            res.render("./users/profile", {users:users})
+        })
 	},
     logout: (req, res) => {
         res.clearCookie('userEmail');
@@ -92,6 +93,59 @@ const userController = {
             avatar: avatar
         })
         return res.render('./users/login.ejs');
+    },
+    delete: (req,res) => {
+        db.User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        req.session.destroy()
+         res.redirect("/")
+    },
+    editar: (req,res) => {
+        db.User.findByPk(req.params.id)
+        .then(function(user){
+            res.render("./users/editUser", {user:user})
+        })
+    },
+    editarModif: async(req, res) =>{
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
+             return res.render('./users/register',{
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
+        let userInDB = await db.User.findOne({where: {email: req.body.email}})
+        
+        /*if(userInDB){
+            return res.render('./users/register.ejs', {
+                errors: {
+                    email: {
+                        msg: 'EL CORREO YA ESTA EN USO'
+                    }
+                },
+                oldData: req.body
+            })
+        }*/
+
+        let avatar;
+        if (req.file != undefined) {
+            avatar = req.file.filename;
+        } else {avatar = "default-image.png"}
+
+        db.User.update({
+            ...req.body,
+            avatar: avatar
+        },{
+            where:{
+                id: req.params.id
+            }
+        })
+        res.redirect("/")
     }
 
 }; 

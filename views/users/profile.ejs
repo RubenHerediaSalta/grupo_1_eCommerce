@@ -13,9 +13,16 @@
             
             <div class="avatar"><img src="/images/users/<%= user.avatar %>"></div>
             
-            <h4>BIENVENIDO DE NUEVO <%= user.firstName %></h4>
+            <h4>BIENVENIDO <%= user.firstName %></h4>
 
             <h3><%= user.email %></h3>
+            
+            <div class="botoncarrito">
+                <button type="submit" class="boton"><a href="/users/editUser/<%= user.id %>">Editar</a></button>
+            </div>
+            <form method="POST" action="/users/delete/<%= user.id %>/?_method=DELETE">
+                <input class="boton" type="submit" value="Borrar"> 
+              </form>
 
         
         </section>
