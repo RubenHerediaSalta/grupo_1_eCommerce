@@ -16,8 +16,9 @@ main{
     background-size: 100%;
     width: 100%;
     margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
     display: block;
-    background-color: black;
 }
 footer{
     background-color: black;
@@ -45,6 +46,54 @@ footer{
     font-size: 40px;
 }
 
+.categorias{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+.catg{
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    border-color: #FFF;
+    border-style: dashed;
+    flex-wrap: wrap;
+    line-height: 25px;
+    display: none;
+   /* left: 0;
+    left: 100%;
+    transition: left 0.3s;*/
+}
+.catgV{
+    display: block;
+}
+.toggle{
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+}
+.banner{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+section .carrou{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+section .ofertas{
+    background-image:url(https://media0.giphy.com/media/dCWcACCmyUI8uqmTzY/giphy.gif?cid=ecf05e471iyo1i3dizd3vehwy0n9kw6l4juuyydmyizdiav9&rid=giphy.gif&ct=g);
+    width: 100%;
+    height: 75px;
+}
+
 /* ------------SEARCH BAR------------ */
 .search input[type=text]{
     width:300px;
@@ -56,6 +105,7 @@ footer{
 .search{
     float:right;
     margin:7px;
+    display: contents;
 }
       
 .search button{
@@ -68,507 +118,9 @@ footer{
     cursor: pointer;
 } 
 /*-------------------------------------------*/
-.descripcion {
-    display: flex;
-}
 
-.productos{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 10px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.prod{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
-    margin: 5px;
-    box-shadow: 0 0 10px orange;
-}
-.prod img{
-    background-color: white;
-    height: 70%;
-    width: 100%;
-    border-bottom: #000 2px solid;
-}
-.info{
-    font-family: 'audiowide';
-    background-color: #000;
-    height: 30%;
+/*---------------------RESPONSIVE----------------------------*/
 
-}
-.pop{
-    display: none;
-}
-.categorias{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    background-color: black;
-    color: white;
-}
-.catg{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 12px;
-    padding: 10px;
-    border-color: #FFF;
-    border-style: dashed;
-    flex-wrap: wrap;
-}
-
-.burger-menu{
-    display: none;
-}
-
-.banner{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-section .carrou{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-}
-section .ofertas{
-    background-image:url(https://media0.giphy.com/media/dCWcACCmyUI8uqmTzY/giphy.gif?cid=ecf05e471iyo1i3dizd3vehwy0n9kw6l4juuyydmyizdiav9&rid=giphy.gif&ct=g);
-    width: 100%;
-    height: 75px;
-    text-align: center;
-}
-
-.forma{
-    width: 100%;
-}
-
-.precio-disc{
-    display: flex;
-    justify-content: space-around;
-}
-
-.precio{
-    color: red;
-}
-
-.descuento{
-    color: green;
-}
-
-.nombre{
-    text-align: center;
-    font-weight: bold;
-    margin-top: 5px;
-    color: white;
-}
-
-.footinfo{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-a{
-    color: white;
-    transition: all 450ms;
-}
-a:hover{
-    color: orange;
-   
-}
-
-/*------------- DETALLES DE PRODUCTOS------------ */
-
-.detail{
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 130px;
-    padding-bottom: 130px;
-}
-.pdinfo{
-    background-image: url("/images/backhead.jpg");
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 58%;
-    justify-content: space-evenly;
-    padding: 10px;
-    box-shadow: 6px 14px 37px #000;
-    margin-right: 10px;
-}
-.pddes{
-    font-family: 'Audiowide', sans-serif;
-    width: 100%;
-    color: black;
-    padding-top: 15px;
-    font-size: 20px;
-    font-weight: bolder;
-    margin-bottom: 10px;
-}
-.pdesp{
-    width: 100%;
-    color: black;
-    font-weight: bolder;
-    text-align: justify;
-    padding-right: 10px;
-}
-.pdpre{
-    width: 100%;
-    font-weight: bolder ;
-    color: red;
-    font-family: 'Audiowide', sans-serif;
-}
-.pdopciones{
-    display: flex;
-}
-.pdfde{
-    width: 33%;
-    color: white;
-    text-align: center;
-}
-.pdc{
-    width: 33%;
-    color: white;
-    text-align: center;
-}
-.pde{
-    width: 33%;
-    color: white;
-    text-align: center;
-}
-.pdbotones{
-    display: flex;
-    justify-content: space-evenly;
-}
-.botoncomprar button{
-    width: 100%;
-    background: gray;
-    border: none;
-    padding: 8px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-    transition: all 500ms;
-    border-radius: 10px;
-}
-.botoncarrito button{
-    width: 100%;
-    background: gray;
-    border: none;
-    padding: 8px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-    transition: all 500ms;
-    border-radius: 10px;
-}
-.pdimg{
-    display: flex;
-    background-image: url("/images/backhead.jpg");
-    width: 40%;
-    height: 300px;
-    transition: all 600ms;
-    justify-content: space-around;
-}
-/*.pdimg img:hover {
-    transform: scale(1.5);
-    
-}*/
-.botoncarrito button:hover{
-    background-color: blue;
-}
-.botoncomprar button:hover{
-    background-color: green;
-}
-
-/*-------------------------------------------------*/
-
-/*-------------PRODUCTOS CARRITO------------ */
-
-.productoscarrito{
-    padding-top: 15px;
-    color: black;
-    font-weight: bolder;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 150px;
-    padding-bottom: 150px;
-}
-.listacarrito{
-    display: flex;
-    flex-direction: column;
-    background-image: url("/images/backhead.jpg");
-    align-items: center;
-    justify-content: space-evenly;
-    width: 60%;
-    border: white solid 2px;
-    padding: 5px;
-}
-.pc1{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    border-bottom: white solid 2px;
-}
-.resumenpedido{
-    background-image: url("/images/backhead.jpg");
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: stretch;
-    width: 30%;
-    padding: 20px;
-    border: white solid 2px;
-}
-.pcimg{
-    display: flex;
-    justify-content: center;
-    width: 20%;
-    height: 100px;
-
-}
-.pctit{
-    font-family: 'Audiowide';
-    font-weight: bolder;
-    font-size: 20px;
-    border-bottom: white solid 2px;
-
-}
-.pcdel{
-    color: red;
-}
-.pcbotones{
-    display: flex;
-    justify-content: space-between;
-}
-.botonvaciar button{
-    width: 100%;
-    background: gray;
-    border: none;
-    padding: 8px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-    transition: all 500ms;
-    border-radius: 10px;
-}
-.botoncontinuar button{
-    width: 100%;
-    background: gray;
-    border: none;
-    padding: 8px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-    transition: all 500ms;
-    border-radius: 10px;
-}
-.botonvaciar button:hover{
-    background-color: red;
-}
-.botoncontinuar button:hover{
-    background-color: green;
-}
-.pdicon{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 10px;
-    font-weight: bolder;
-    color: green;
-
-}
-/*-------------------------------------------------*/
-
-
-
-/* ------------------FORMULARIO DE REGISTRO-------------------- */ 
-
-
-.register-custom {
-    width: 35%;
-    background-image: url("/images/backhead.jpg");
-    padding: 30px;
-    margin: auto;
-    margin-top: 100px;
-    border-radius: 4px;
-    font-family:'Audiowide', sans-serif;
-    color: darkred;
-    box-shadow: 6px 14px 37px #000; 
-}
-
-
-.term-c {
-    font-size: 10px;
-    font-family: sans-serif;
-    transition: all 450ms;
-    color: #000;
-}
-
-.term-c:hover { 
-    background-color: black;
-    border-radius: 10px;
-    color:wheat 
-}
-
-.register-custom h4 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    color: #000;
-}
-
-.controls {
-    width: 100%;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 16px;
-    border: 1px solid orange;
-    font-family:'Audiowide', sans-serif;
-    font-size: 18px;
-}
-::placeholder{
-    color: white;
-    opacity: 1;
-}
-.errorform{
-    width: 100%;
-    background-color: darkred;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 16px;
-    border: 3px solid black;
-    font-family:'Audiowide', sans-serif;
-    font-size: 18px;
-}
-.register-custom p {
-    height: 40px;
-    text-align: center;
-    font-size: 15px;
-    line-height: 40px;
-}
-
-.register-custom a:hover {
-    color: white; 
-    text-decoration: none;
-}
-
-.register-custom .boton {
-    width: 100%;
-    background: gray;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-    transition: all 500ms;
-    border-radius: 10px;
-}
-
-.register-custom .boton:hover {
-    background-color: black
-
-}
-
-.register-main {
-    padding-top: 15px;
-    background-color: #2A2B12;
-    padding-bottom: 30px;
-}
-
-.ya-acc {
-    font-size: 10px;
-    font-family: sans-serif;
-    transition: all 450ms;
-    color: #000;
-}
-
-.ya-acc:hover { 
-    background-color: black;
-    border-radius: 10px;
-    color:wheat 
-}
-
-/*-------------------------------------------------*/
-
-/* ------------------FORMULARIO DE LOGIN ------------------- */ 
-
-
-.recordar-pw {
-    font-size: 10px;
-    transition: all 450ms;
-    color: #000;
-}
-
-.recordar-pw:hover { 
-    background-color: black;
-    border-radius: 10px;
-    color:wheat 
-}
-
-.no-tenes-acc {
-    font-size: 10px;
-    font-family: sans-serif;
-    transition: all 450ms;
-    color: #000;
-}
-
-.no-tenes-acc:hover { 
-    background-color: black;
-    border-radius: 10px;
-    color:wheat 
-}
-/*-----------------------VALIDACIONES LOGIN-------------------------*/
-.is-valid {
-    color: #198754;
-  }
-  .is-invalid {
-    color: #842029;
-  }
-    .alert-warning{
-    display: block;
-    font-family: sans-serif;
-    color:red;
-    font-weight: bolder;
-    background-color: white;
-    text-align: center;
-    border-radius: 10px ;
-    border: 4px solid black;
-    animation-name: errorcolor;
-    animation-duration: 500ms;
-    animation-iteration-count: 3;
-    animation-direction: alternate;
-
-  }
-  @keyframes errorcolor{
-    0% {background-color: black;
-    color: white;
-    border: 4px solid white;}
-    100%{background-color: white;
-    color: red;
-    border: 4px solid black;}
-  }
-/*-------------------------------------------------*/
-/* ------------------PERFIL DE USUARIO ------------------- */ 
-
-.avatar img{
-    width: 100%;
-    border-radius: 100%;
-    border: 4px solid black
-}
-
-/*-------------------------------------------------*/
 @media (min-width: 768px) {
     .descripcion {
         display: none;
@@ -586,11 +138,12 @@ a:hover{
     .prod{
         display: flex;
         flex-wrap: wrap;
+        flex-direction: row;
         position: relative;
-        width: 19%;
+        width: 23%;
         margin: 5px;
         box-shadow: 0 0 10px orange;
-        border: black solid 2px;
+        border: black solid 1px;
     }
     .prod img{
         background-color: white;
@@ -613,7 +166,7 @@ a:hover{
         font-weight: bolder;
         justify-content: center;
         align-items: center;
-        text-align: center;
+        text-align: justify;
         width: 100%;
         height: 100%;
         transition: all 450ms;
@@ -629,5 +182,36 @@ a:hover{
     }
     .footinfo{
         flex-direction: row;
+    }
+    .register-custom {
+        width: 40%;
+    }
+    .pdimg{
+        display: flex;
+        background-color: white;
+        width: 40%;
+        height: 300px;
+        justify-content: space-around;
+        border: #000 solid;
+        box-shadow: 0px 0px 25px orange;
+    }
+    .pdinfo{
+        margin-right: 10px;
+        width: 58%;
+    }
+    .detail{
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    a{
+        text-decoration: none;
+    }
+    .toggle{
+        display: none;
+    }
+    .catg{
+        display: flex;
+        flex-direction: row;
+        line-height: 20px;
     }
 }

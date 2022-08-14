@@ -1,10 +1,10 @@
 <header>
+    <script defer src="/js/burgerMenuScript.js"></script>
     <div class="fulllogo">
 
         <a href="/"><div class="logo"><img src="/images/giflogo.gif" width="150" height="150" alt=""></i></div></a>
 
         <div class="search">
-          
             <form action="#">
                 <input type="text"
                     placeholder=" Buscar productos..."
@@ -21,6 +21,9 @@
     </div>
     
     <nav class="categorias">
+        <button class="toggle">
+            <i class="fas fa-bars"></i>
+        </button>
         <ul class="catg" type="none">
             <li><a href="/products/notebooks">NOTEBOOKS</a></li>
             <li><a href="/products/monitores">MONITORES</a></li>
@@ -40,8 +43,4 @@
             <% } %>
         </ul>
     </nav>
-    
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
 </header>

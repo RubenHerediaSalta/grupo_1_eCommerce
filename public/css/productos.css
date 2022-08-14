@@ -1,0 +1,262 @@
+/*--------------------PRODUCTOS--------------------- */
+.descripcion {
+    display: flex;
+}
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.prod{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 5px;
+    box-shadow: 0 0 10px orange;
+}
+.prod img{
+    background-color: white;
+    height: 70%;
+    width: 100%;
+    border-bottom: #000 2px solid;
+}
+.info{
+    font-family: 'audiowide';
+    background-color: #000;
+    height: 30%;
+}
+.pop{
+    display: none;
+}
+.forma{
+    width: 100%;
+}
+.precio-disc{
+    display: flex;
+    justify-content: space-around;
+}
+.precio{
+    color: red;
+}
+.descuento{
+    color: green;
+}
+.nombre{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+    color: white;
+}
+.footinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+a{
+    color: white;
+    transition: all 450ms;
+    text-decoration: none;
+}
+a:hover{
+    color: orange;
+}
+/*------------------------------------------------- */
+
+/*------------- DETALLES DE PRODUCTOS------------ */
+
+.detail{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.pdinfo{
+    background-image: url("/images/backhead.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 10px;
+    box-shadow: 0px 0px 25px orange;
+    border: #000 solid;
+}
+.pddes{
+    font-family: 'Audiowide', sans-serif;
+    width: 100%;
+    color: black;
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.pdesp{
+    width: 100%;
+    color: black;
+    font-weight: bolder;
+    text-align: justify;
+    padding-right: 10px;
+}
+.pdpre{
+    width: 100%;
+    font-weight: bolder ;
+    color: red;
+    font-family: 'Audiowide', sans-serif;
+}
+.pdopciones{
+    display: flex;
+}
+.pdc{
+    width: 33%;
+    color: black;
+    text-align: center;
+    
+}
+.pdbotones{
+    display: flex;
+    justify-content: space-evenly;
+}
+.botoncomprar button{
+    width: 100%;
+    background: gray;
+    border: none;
+    padding: 8px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    transition: all 500ms;
+    border-radius: 10px;
+}
+.botoncarrito button{
+    width: 100%;
+    background: gray;
+    border: none;
+    padding: 8px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    transition: all 500ms;
+    border-radius: 10px;
+}
+.pdimg{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 300px;
+    justify-content: space-around;
+    border: #000 solid;
+    box-shadow: 0px 0px 25px orange;
+}
+.botoncarrito button:hover{
+    background-color: blue;
+}
+.botoncomprar button:hover{
+    background-color: green;
+}
+
+/*-------------------------------------------------*/
+
+/*-------------PRODUCTOS CARRITO------------ */
+
+.productoscarrito{
+    padding-top: 15px;
+    color: black;
+    font-weight: bolder;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.listacarrito{
+    display: flex;
+    flex-direction: column;
+    background-image: url("/images/backhead.jpg");
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    border: white solid 2px;
+    padding: 5px;
+}
+.pc1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    border-bottom: white solid 2px;
+}
+.resumenpedido{
+    background-image: url("/images/backhead.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 30%;
+    padding: 20px;
+    border: white solid 2px;
+}
+.pcimg{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 100px;
+
+}
+.pctit{
+    font-family: 'Audiowide';
+    font-weight: bolder;
+    font-size: 20px;
+    border-bottom: white solid 2px;
+
+}
+.pcdel{
+    color: red;
+}
+.pcbotones{
+    display: flex;
+    justify-content: space-between;
+}
+.botonvaciar button{
+    width: 100%;
+    background: gray;
+    border: none;
+    padding: 8px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    transition: all 500ms;
+    border-radius: 10px;
+}
+.botoncontinuar button{
+    width: 100%;
+    background: gray;
+    border: none;
+    padding: 8px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    transition: all 500ms;
+    border-radius: 10px;
+}
+.botonvaciar button:hover{
+    background-color: red;
+}
+.botoncontinuar button:hover{
+    background-color: green;
+}
+.pdicon{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px;
+    font-weight: bolder;
+    color: white;
+    background-color: #000;
+
+}
+/*-------------------------------------------------*/
