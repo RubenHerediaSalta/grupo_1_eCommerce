@@ -190,7 +190,7 @@ section .ofertas{
         display: flex;
         background-color: white;
         width: 40%;
-        height: 300px;
+        height: 370px;
         justify-content: space-around;
         border: #000 solid;
         box-shadow: 0px 0px 25px orange;
@@ -213,5 +213,9 @@ section .ofertas{
         display: flex;
         flex-direction: row;
         line-height: 20px;
+    }
+    .pdopciones{
+        display: flex;
+        flex-direction: row;
     }
 }

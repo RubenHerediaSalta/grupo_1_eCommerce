@@ -1,6 +1,5 @@
 const express = require ('express');
 const router = express.Router(); 
-const path = require('path');
 const multer = require('multer');  
 const { body } = require('express-validator');
 const productsControllers = require('../controllers/productsControllers.js'); 
@@ -29,6 +28,7 @@ router.delete('/delete/:id/', productsMiddleware, productsControllers.delete);
 
  //---------CARRITO DE PRODUCTOS-------//
 router.get('/productCart', productsControllers.cart); 
+
 
 //---------SECCIONES-------//
 router.get('/notebooks', productsControllers.notebooks);

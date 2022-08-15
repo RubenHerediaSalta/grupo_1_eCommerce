@@ -1,8 +1,7 @@
 const db = require("../database/models")
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op
 
-/*const ofertas = products.filter(function(products){
-	return products.category == "ofertas"
-})*/
 
 const mainController = {
     index: (req, res) => {
@@ -12,6 +11,15 @@ const mainController = {
         .then(function(products){
             res.render ("./home", {products:products})
     })
+    },
+    search:(req, res) => {
+        const {term} = req.query;
+
+        db.Product.findAll({
+            where:{name:{[Op.like]:'%' + term + '%'}},
+            include:["sections"]
+          })
+          .then(products=> res.render("./products/allProducts", {products:products}))
     }
 }
 

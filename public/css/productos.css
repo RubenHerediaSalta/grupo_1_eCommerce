@@ -109,6 +109,10 @@ a:hover{
 }
 .pdopciones{
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .pdc{
     width: 33%;
