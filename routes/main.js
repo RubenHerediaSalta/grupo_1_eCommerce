@@ -9,4 +9,5 @@ router.get('/', mainController.index);
 //---------BUSQUEDA DE PRODUCTOS-------//
 router.get('/search', mainController.search)
 
+
 module.exports = router

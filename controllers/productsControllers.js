@@ -1,5 +1,7 @@
 const db = require("../database/models")
 const { validationResult } = require('express-validator');
+const { sequelize } = require("../database/models");
+const Op = sequelize.Op; 
 
 const productsController = {
 
@@ -152,8 +154,12 @@ const productsController = {
         .then(function(products){
             res.render ("./products/ofertas", {products:products})
     })
-    }
-//-------------------------------------------------------//
+    },
+//-------------------SEARCH------------------//
+
+
+
+
 }
 
                              

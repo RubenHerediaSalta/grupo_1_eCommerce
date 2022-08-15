@@ -39,4 +39,5 @@ router.get('/perifericos', productsControllers.perifericos);
 router.get('/ofertas', productsControllers.ofertas);
 
 
+
 module.exports = router 
