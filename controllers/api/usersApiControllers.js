@@ -36,7 +36,7 @@ const usersApiControllers = {
             }
             res.json(respuesta); 
         })
-	},
+	}
 
 
 }

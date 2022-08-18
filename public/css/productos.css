@@ -203,6 +203,10 @@ a:hover{
     padding: 20px;
     border: white solid 2px;
 }
+.imgdes{
+    width: 20px;
+    height: 20px;
+}
 .pcimg{
     display: flex;
     justify-content: center;

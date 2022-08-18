@@ -141,6 +141,7 @@ section .ofertas{
         flex-direction: row;
         position: relative;
         width: 23%;
+        height: 400px;
         margin: 5px;
         box-shadow: 0 0 10px orange;
         border: black solid 1px;

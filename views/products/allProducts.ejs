@@ -11,7 +11,7 @@
         <div class="productos">
 			<% products.forEach(function(products){ %>
             <div class="prod">
-            <a href="/products/detail/<%= products.id %>"><p class="pop"><%= products.description%></p>
+            <a href="/products/detail/<%= products.id %>" class="imgbox"><p class="pop"><%= products.description%></p>
             <img src="/images/products/<%= products.image %>" alt="">
             <div class="info">
                 <div class="precio-disc">

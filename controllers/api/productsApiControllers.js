@@ -1,10 +1,7 @@
-const path = require('path');
 const db = require('../../database/models')
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
-const moment = require('moment');
-
-// const Products = db.Product; 
+const { promiseImpl } = require("ejs");
 
 const productsApiController = {
     'list': (req,res) => {
@@ -28,14 +25,14 @@ const productsApiController = {
             let respuesta = {
                 meta: {
                     status: 200, 
-                    total: product.lenght,
+                    total: product.length,
                     url: 'api/products/:id'
                 },
                 data: product
             }
             res.json(respuesta); 
         })
-	},
+	}
 
 }
 
