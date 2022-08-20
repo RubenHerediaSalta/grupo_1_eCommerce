@@ -14,7 +14,6 @@ const mainController = {
     },
     search:(req, res) => {
         const {term} = req.query;
-
         db.Product.findAll({
             where:{name:{[Op.like]:'%' + term + '%'}},
             include:["sections"]

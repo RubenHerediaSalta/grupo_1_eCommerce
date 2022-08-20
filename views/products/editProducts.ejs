@@ -13,6 +13,7 @@
 
         <section class="register-custom">
             <h4>EDITAR <%= products.name %></h4>
+            <div class="peimg"><img src="/images/products/<%= products.image %>" alt=""></div>
             <% if (locals.errors && errors.name) { %> <%= errors.name.msg %><% } %>
             <input class="controls namefield" type="text" name="name" id="name" placeholder="Nombre del Producto" value = "<%= products.name %>" >
             <div class="controls"><label for="section">Seccion :</label>
