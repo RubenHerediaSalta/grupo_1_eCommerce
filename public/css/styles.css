@@ -64,9 +64,6 @@ footer{
     flex-wrap: wrap;
     line-height: 25px;
     display: none;
-   /* left: 0;
-    left: 100%;
-    transition: left 0.3s;*/
 }
 .catgV{
     display: block;
@@ -93,6 +90,56 @@ section .ofertas{
     width: 100%;
     height: 75px;
 }
+.boton{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 60px;
+	background: #141414;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+.boton span {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+.boton.dos::after {
+	content: "";
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: calc(-100% - 80px);
+	border-bottom: 80px solid green;
+	border-right: 80px solid transparent;
+	transition: .4s ease-in-out all;
+}
+.boton.dos.danger::after{
+    border-bottom: 80px solid red;
+    
+}
+.boton.dos:hover::after {
+	left: 0;
+}
+.boton.dos svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
 
 /* ------------SEARCH BAR------------ */
 .search input[type=text]{
@@ -116,7 +163,40 @@ section .ofertas{
     font-size: 12px;
     border: none;
     cursor: pointer;
-} 
+}
+.fondoqs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("/images/fondoqs.jpg");
+}
+.fondoqs img{
+    width: 600px;
+    height: 600px;
+}
+.reveal{
+    display: flex;
+    justify-content: center;
+}
+.infoqs{
+    margin-top: 100px;
+    color: black;
+    -webkit-text-stroke: 1px orange;
+    display: flex;
+    font-size: 45px;
+    font-weight: bolder;
+    z-index: 3;
+    background-image: url("/images/backmain.jpg");
+    background-size: cover;
+}
+.tema{
+    background-image: url("/images/gaming.jpg");
+    background-size: cover;
+    font-size: 45px;
+    font-weight: bolder;
+    color: black;
+    -webkit-text-stroke: 1px orange;
+}
 /*-------------------------------------------*/
 
 /*---------------------RESPONSIVE----------------------------*/
@@ -206,6 +286,10 @@ section .ofertas{
     }
     a{
         text-decoration: none;
+    }
+    a:hover{
+        background-color: white;
+        color: #000;
     }
     .toggle{
         display: none;

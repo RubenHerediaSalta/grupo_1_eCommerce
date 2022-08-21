@@ -29,6 +29,8 @@
     "multer": "^1.4.4",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.19",
+    "scrollreveal": "^4.0.9",
     "sequelize": "^6.21.3"
-  }, "proxy": "http://localhost:2022"
+  },
+  "proxy": "http://localhost:2022"
 }

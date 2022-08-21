@@ -9,7 +9,7 @@
 
     <main>
     <div class="detail">
-        <div class="pdimg"><img src="/images/products/<%= products.image %>" alt=""></div>
+        <div class="pdimg"><img src="/images/products/<%= products.image %>" alt="" style="width: 100%"></div>
         <div class="pdinfo">
         <div class="pddes"><p><%= products.name %></p></div>
         <div class="pdesp"><p><%= products.description%></p></div>
@@ -50,14 +50,14 @@
         </div>
     <div class="pdbotones">
         <div class="botoncomprar">
-            <button type="submit" class="boton">Comprar Ahora</button>
+            <button type="submit" class="boton dos"><span> Comprar Ahora </span><svg><rect x="0" y="0" fill="none"></rect></svg></button>
         </div>
         <div class="botoncarrito">
-            <button type="submit" class="boton">Agregar al Carrito</button>
+            <button type="submit" class="boton dos"><span> Agregar al Carrito </span><svg><rect x="0" y="0" fill="none"></rect></svg></button>
         </div>
         <% if (locals.isLogged && locals.admin == true) { %>
         <div class="botoncarrito">
-            <button type="submit" class="boton"><a href="/products/editProducts/<%= products.id %>">Editar</a></button>
+            <button type="submit" class="boton dos danger"><span><a href="/products/editProducts/<%= products.id %>">Editar</a></span><svg><rect x="0" y="0" fill="none"></rect></svg></button>
         </div>
         <% } %>
     </div>

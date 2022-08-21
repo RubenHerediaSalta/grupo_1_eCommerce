@@ -41,10 +41,10 @@
            <!-- <p class="controls"> Producto en Oferta  <input type="checkbox" id="category" name="category" value="ofertas"></p>-->     
             <input class="controls" type="file" name="image" id="image" accept=".jpg,.png" multiple placeholder="Seleccionar Imagen">
             <ul class="erroresEdit" style="list-style-type:none;"></ul>
-            <input class="boton" type="submit" value="Editar">
+            <button class="boton dos" type="submit" value="Editar"><span>editar</span><rect x="0" y="0" fill="none"></rect></svg></button>
               </form>
               <form method="POST" action="/products/delete/<%= products.id %>/?_method=DELETE">
-                <input class="boton" type="submit" value="Borrar"> 
+                <button class="boton dos danger" type="submit" value="Borrar"><span>borrar</span><rect x="0" y="0" fill="none"></rect></svg></button> 
               </form>
             </section>
         </form>

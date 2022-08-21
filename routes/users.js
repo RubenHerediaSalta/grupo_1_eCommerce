@@ -19,7 +19,6 @@ router.post('/register', uploadUser.single('avatar'), validations, userControlle
 
 //---------PERFIL DE USUARIO-------//
 router.get('/profile/', loginMiddleware, userControllers.profile);
-//router.get('/profile/:id/', loginMiddleware, userControllers.profile);
 router.get('/logout', userControllers.logout)
 
 //---------EDITAR USUARIO-------//
@@ -29,7 +28,8 @@ router.put('/editUser/:id/', uploadUser.single('avatar'), userControllers.editar
 //---------BORRAR USUARIO-------//
 router.delete('/delete/:id/', userControllers.delete); 
 
-//------LISTADO DE USUARIOS-----// (ADMIN)
+//------QUIENES SOMOS-----//
+router.get('/quienesSomos/', userControllers.quienesSomos);
 
 
 module.exports = router;

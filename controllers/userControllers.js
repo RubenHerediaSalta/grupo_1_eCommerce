@@ -146,6 +146,9 @@ const userController = {
             }
         })
         res.redirect("/")
+    },
+    quienesSomos:(req,res) => {
+        res.render ('./users/quienesSomos.ejs')
     }
 
 }; 
