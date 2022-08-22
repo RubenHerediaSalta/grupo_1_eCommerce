@@ -16,7 +16,6 @@ main{
     background-size: 100%;
     width: 100%;
     margin: 0 auto;
-    padding-top: 5%;
     padding-bottom: 5%;
     display: block;
 }
@@ -197,6 +196,18 @@ section .ofertas{
     color: black;
     -webkit-text-stroke: 1px orange;
 }
+.bannerC{
+    background-image: url("/images/fondoqs.jpg");
+    font-family: 'Audiowide', sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    -webkit-text-stroke: 1px orange;
+}
+.reveal{
+    padding-top: 90px;
+}
 /*-------------------------------------------*/
 
 /*---------------------RESPONSIVE----------------------------*/
@@ -285,9 +296,10 @@ section .ofertas{
         padding-bottom: 5%;
     }
     a{
+        color: white;
         text-decoration: none;
     }
-    a:hover{
+    li:hover{
         background-color: white;
         color: #000;
     }

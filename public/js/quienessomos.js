@@ -37,3 +37,16 @@ sr.reveal('.reveal', {
     distance : '600px',
     scale:100,
   });
+
+  sr.reveal('.bannerC', {
+    duration: 900,
+    delay    : 200,
+    scale: 0,
+  });
+
+  sr.reveal('.productos', {
+    origin : 'bottom',
+    duration: 900,
+    delay    : 200,
+    distance : '600px',
+  });

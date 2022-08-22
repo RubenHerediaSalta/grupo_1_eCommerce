@@ -2,6 +2,7 @@ window.addEventListener("load", function(){
     
     let validacionesRegister = document.querySelector(".formRegister")
 
+
     validacionesRegister.addEventListener("submit", function(e){
        
         let erroresR = [];
@@ -34,6 +35,8 @@ window.addEventListener("load", function(){
             e.preventDefault();
                 
                 let erroresRegister = document.querySelector(".erroresRegister")
+                let botonrojo = document.querySelectorAll("#boton")
+
                 erroresRegister.innerHTML= ""
                 for (let i = 0; i < erroresR.length; i++) {
                     
@@ -74,6 +77,7 @@ window.addEventListener("load", function(){
         }else{
         }
         let erroresRegister = document.querySelector(".erroresRegister")
+
         if (erroresR.length > 0){
             e.preventDefault();
                 
