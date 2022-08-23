@@ -18,7 +18,7 @@ sr.reveal('.reveal', {
 
   sr.reveal('.txtinfo', {
     origin : 'rigth',
-    duration: 900,
+    duration: 1500,
     delay    : 200,
     distance : '600px',
   });
@@ -32,7 +32,7 @@ sr.reveal('.reveal', {
 
   sr.reveal('.txttema', {
     origin : 'top',
-    duration: 900,
+    duration: 1500,
     delay    : 200,
     distance : '600px',
     scale:100,

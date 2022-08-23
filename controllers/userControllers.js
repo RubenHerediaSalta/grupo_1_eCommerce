@@ -8,9 +8,11 @@ const db = require("../database/models")
 
 const userController = {
    
+    //---- VISTA DE LOGIN ----//
     login: (req,res) => {
         res.render ('./users/login.ejs')
     },
+    //---- PROCESO DE LOGIN ----//
     loginProcess: async(req, res) => {
             let userToLogin = await db.User.findOne({
                   where: {email: req.body.email},
@@ -45,20 +47,24 @@ const userController = {
         }
     })};
     },
+    //---- VISTA DE PERFIL ----//
     profile: (req, res) =>{
         db.User.findByPk(req.params.id)
         .then(function(users){
             res.render("./users/profile", {users:users})
         })
 	},
+    //---- PROCESO DE LOGOUT ----//
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy()
         return res.redirect('/')
 	},
+    //---- VISTA DE REGISTRO ----//
     register: (req,res) => {
         res.render ('./users/register.ejs')
     },
+    //---- PROCESO DE REGISTRO ----//
     processRegister: async (req,res)=>{
         const resultValidation = validationResult(req);
 
@@ -94,6 +100,7 @@ const userController = {
         })
         return res.render('./users/login.ejs');
     },
+    //---- PROCESO DE BORRADO ----//
     delete: (req,res) => {
         db.User.destroy({
             where: {
@@ -103,12 +110,14 @@ const userController = {
         req.session.destroy()
          res.redirect("/")
     },
+    //---- VISTA DE EDITAR USUARIO ----//
     editar: (req,res) => {
         db.User.findByPk(req.params.id)
         .then(function(user){
             res.render("./users/editUser", {user:user})
         })
     },
+    //---- PROCESO DE EDITADO DE USUARIO ----//
     editarModif: async(req, res) =>{
         const resultValidation = validationResult(req);
 
@@ -147,6 +156,7 @@ const userController = {
         })
         res.redirect("/")
     },
+    //---- VISTA DE QUIENES SOMOS ----//
     quienesSomos:(req,res) => {
         res.render ('./users/quienesSomos.ejs')
     }
