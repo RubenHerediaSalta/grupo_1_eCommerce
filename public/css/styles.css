@@ -141,28 +141,46 @@ section .ofertas{
 }
 
 /* ------------SEARCH BAR------------ */
-.search input[type=text]{
-    width:300px;
-    height:25px;
-    border-radius:25px;
-    border: none;
+.search input{
+    width:0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #222;
+    outline: black solid 0.5px;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
 }
       
 .search{
-    float:right;
-    margin:7px;
-    display: contents;
+    position: relative;
+  padding: 5px;
 }
       
 .search button{
-    border-radius: 50%;
-    float: right;
-    padding: 5px 10px;
-    margin-right: 16px;
-    font-size: 12px;
-    border: none;
-    cursor: pointer;
+    width: 55px;
+  height: 55px;
+  line-height: 55px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background: black;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
 }
+.search:hover input {
+    width: 240px;
+  }
+  
+  .search input:focus {
+    width: 240px;
+  }
+
+/* ------------QUIENES SOMOS------------ */
 .fondoqs{
     display: flex;
     flex-direction: column;

@@ -5,6 +5,37 @@ const Op = sequelize.Op;
 
 const productsController = {
 
+    create: (req, res) =>{
+        db.Section.findAll()
+        .then(function(sections){
+            res.render ('./products/createProducts', {sections:sections})
+        })
+    },
+    store: async(req, res) =>{
+        const validaciones = validationResult(req)
+            let image;
+        if (req.file != undefined) {
+            image = req.file.filename;
+        } else {image = "default-image.png"}
+
+        if (validaciones.errors.length > 0) {
+
+            db.Section.findAll()
+            .then(function(sections){
+                res.render('./products/createProducts',{
+                    sections: sections,
+                    errors: validaciones.mapped(),
+                    oldData: req.body
+                })
+            })     
+       } else {
+            db.Product.create({
+                ...req.body,
+                image: image
+            })
+            res.redirect('/products/allProducts')
+        }
+    },
     editar: (req,res) => {
         let pedidoProducto = db.Product.findByPk(req.params.id)
         let pedidoSection = db.Section.findAll()
@@ -66,37 +97,6 @@ const productsController = {
             res.render("./products/detail", {products:products})
         })
 	},
-    create: (req, res) =>{
-        db.Section.findAll()
-        .then(function(sections){
-            res.render ('./products/createProducts', {sections:sections})
-        })
-    },
-    store: async(req, res) =>{
-        const validaciones = validationResult(req)
-            let image;
-        if (req.file != undefined) {
-            image = req.file.filename;
-        } else {image = "default-image.png"}
-
-        if (validaciones.errors.length > 0) {
-
-            db.Section.findAll()
-            .then(function(sections){
-                res.render('./products/createProducts',{
-                    sections: sections,
-                    errors: validaciones.mapped(),
-                    oldData: req.body
-                })
-            })     
-       } else {
-            db.Product.create({
-                ...req.body,
-                image: image
-            })
-            res.redirect('/products/allProducts')
-        }
-    },
     delete: (req,res) => {
         db.Product.destroy({
             where: {
@@ -154,12 +154,7 @@ const productsController = {
         .then(function(products){
             res.render ("./products/ofertas", {products:products})
     })
-    },
-//-------------------SEARCH------------------//
-
-
-
-
+    }
 }
 
                              
