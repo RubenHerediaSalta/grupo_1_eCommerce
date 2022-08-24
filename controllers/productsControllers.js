@@ -5,6 +5,9 @@ const Op = sequelize.Op;
 
 const productsController = {
 
+
+    // VISTA DEL CREATE // 
+
     create: (req, res) =>{
         db.Section.findAll()
         .then(function(sections){
@@ -36,6 +39,10 @@ const productsController = {
             res.redirect('/products/allProducts')
         }
     },
+
+    // VISTA DE EDITAR // 
+
+    
     editar: (req,res) => {
         let pedidoProducto = db.Product.findByPk(req.params.id)
         let pedidoSection = db.Section.findAll()
@@ -45,6 +52,9 @@ const productsController = {
             res.render('./products/editProducts', {products:products, sections:sections})
         })
     },
+
+    // FUNCION EDITAR // 
+
     editarModif: (req, res) =>{
         const validacionesEdit = validationResult(req)
         let image;
@@ -52,11 +62,16 @@ const productsController = {
             image = req.file.filename;
         } else {image = "default-image.png"}
         
-        if (validacionesEdit.errors.length > 0) {
+        // SI HAY ERRORES EN LAS VALIDACIONES MOSTRA // -->
+
+
+            if (validacionesEdit.errors.length > 0) {
 
         let pedidoProducto = db.Product.findByPk(req.params.id)
         let pedidoSection = db.Section.findAll()
 
+       // LLAMAMOS A LOS PRODUCTOS Y A LAS SECCIONES // 
+       
         Promise.all([pedidoProducto, pedidoSection])
         .then(function([products, sections]){
             res.render('./products/editProducts', {
@@ -82,12 +97,18 @@ const productsController = {
     cart: (req,res) => {
         res.render ('./products/productCart')
     },
+
+    // ALL PRODUCTS // 
+
     allProducts: (req, res) => {
         db.Product.findAll()
         .then(function(products){
             res.render ("./products/allProducts", {products:products})
         })
     },
+
+    // DETALLE // 
+
     detail: (req, res) => {
         db.Product.findByPk(req.params.id,
             {
@@ -97,6 +118,9 @@ const productsController = {
             res.render("./products/detail", {products:products})
         })
 	},
+
+    // BORRAR // 
+
     delete: (req,res) => {
         db.Product.destroy({
             where: {
@@ -106,6 +130,8 @@ const productsController = {
         res.redirect("/products/allProducts")
     },
 // -----------------SECCIONES-------------------------//
+
+// MUESTRA TODOS LOS PRODUCTOS Y OFERTAS // 
 
     notebooks: (req, res) => {
         db.Product.findAll({
